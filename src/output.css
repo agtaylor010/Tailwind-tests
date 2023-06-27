@@ -1,6 +1,8 @@
-/*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
-*/
+/*@tailwind base;
+@tailwind components;
+@tailwind utilities;*/
+
+/*! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -593,6 +595,10 @@ video {
   justify-self: auto;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -601,19 +607,14 @@ video {
   border-width: 4px;
 }
 
-.border-amber-600 {
+.border-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(217 119 6 / var(--tw-border-opacity));
+  border-color: rgb(63 43 86 / var(--tw-border-opacity));
 }
 
 .border-slate-600 {
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
-}
-
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
 .bg-primary {
@@ -652,6 +653,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -664,6 +670,11 @@ video {
   text-transform: uppercase;
 }
 
+.text-cyan-200 {
+  --tw-text-opacity: 1;
+  color: rgb(165 243 252 / var(--tw-text-opacity));
+}
+
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -674,7 +685,17 @@ video {
   color: rgb(63 43 86 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.hover\:text-green-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
