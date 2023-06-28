@@ -9,9 +9,9 @@
 	</head>
 	<body class="bg-primary text-white" style="background: #3F2B56 url('img/course-splash-img.png') top right no-repeat;">
 
-			<!-- The video -->
-			<video autoplay muted loop id="myVideo" style="position:fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;">
-			  <source src="rain.mp4" type="video/mp4">
+			<!-- Video Background -->
+			<video autoplay muted loop id="myVideo" style="position:fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; mix-blend-mode:color-dodge;">
+			  <source src="video/abstractbg.mp4" type="video/mp4">
 			</video>
 			
 			<main class="p-12 relative">
@@ -28,14 +28,15 @@
 				</div>
 
 				<!-- Start Button -->
-				<button class="w-1/3 bg-white rounded text-secondary p-4 mt-4 mb-12 text-2xl font-bold hover:bg-secondary transition ease-in-out hover:scale-[1.02] hover:text-white">Begin Course &#187;</button>
+				<button class="border-4 border-secondary w-1/3 bg-white rounded text-secondary p-4 mt-4 mb-12 text-2xl font-bold hover:bg-secondary transition ease-in-out hover:scale-[1.02] hover:text-white">Begin Course &#187;</button>
 
 			</main>
 
 			<footer class="absolute inset-x-0 bottom-0">
 				<img src="img/tagline.svg" alt="Shaping the future" width="336" height="37" class="px-10 mb-8">
-				<div class="justify-left text-left px-10 py-5 bg-black/40">
-					<p>&copy; Copyright Organisation Name . 20/06/2023 . v1.2.3</p>
+				<div class="justify-left text-left px-10 py-5 bg-black/40 flex flex-row">
+					<p class="w-1/2">&copy; Copyright Organisation Name</p>
+					<p class="w-1/2 text-right" style="text-align: right;">20/06/2023 . v1.2.3</p>
 				</div>
 			</footer>
 
