@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Quiz Examples</title>
 		<link rel="stylesheet" type="text/css" href="output.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	</head>
 
 	<style type="text/css">
@@ -22,7 +23,8 @@
 					<h2 class="text-lg font-bold mb-8">Question 1 of X: Making satellites great again.</h2>
 					<h3 class="text-2xl mb-4">Which satellite is the correct one?</h3>
 					<h4 class="font-bold text-gray-500 mb-4">Please choose the correct option.</h4>
-					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+					
+					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
 					  <div class="basis-1/4 lg:basis-1/4 sm:basis-1/4 border-8 border-grey-500 p-2 hover:border-slate-800 transition hover:shadow cursor-pointer active:border-secondary">
 					  	<img class="aspect-square object-cover w-full h-full" src="img/quiz/quiz-img-1.jpg" alt="a great loking photo of a dish" width="6011" height="4008">
 					  </div>
@@ -36,6 +38,24 @@
 					  	<img class="aspect-square object-cover w-full h-full" src="img/quiz/quiz-img-4.jpg" alt="a great loking photo of a dish" width="3494" height="2330">
 					  </div>
 					</div>
+					
+					<button class="w-full focus:bg-yellow-600 bg-primary rounded text-white p-4 font-bold hover:bg-secondary transition ease-in-out hover:scale-[1.02] mb-4">Submit &#10224;</button>
+					
+					<!-- Good Feedback -->
+					<div class="p-8 bg-green-700 text-white text-center mb-4">
+						<span class="material-symbols-outlined scale-150">check_circle</span>
+						<!-- <p>&#9745;</p> -->
+						<p class="font-bold text-xl">Well done!</p>
+						<p>You guessed the right answer and you are on your wy to win a Gazillion buckaroos!</p>
+					</div>
+
+					<!-- Poor Feedback -->
+					<div class="p-8 bg-red-600 text-white text-center mb-4">
+						<span class="material-symbols-outlined scale-150">dangerous</span>
+						<p class="font-bold text-xl">Wrong!</p>
+						<p>I'm sorry, but back to the gutter for you!</p>
+					</div>
+
 				</section>
 
 				<!-- Group of 4 as all blocks -->
