@@ -5,77 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video Resources Template</title>
-    <link rel="stylesheet" href="video-style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   </head>
-  <body>
+  <body class="border-t-8 border-[#f1444a] bg-[#252c36] p-4">
     <main>
-        <h1>Welcome to My Website</h1>  
+
+
+        <header class="flex">
+          <div class="flex-none w-11/12 mb-9">
+            <img src="img/doe-logo.svg" class="w-[242px] h-[104]">
+          </div>
+          <div class="flex-initial w-1/12 float-right">
+            menu
+          </div>
+        </header>
+
+        <h1 class="text-white text-6xl mb-2"><span class="text-[#c8cacd]">NAPLAN</span> Online 2022</h1>
+        <h2 class="text-white text-2xl mb-4 border-b-4 border-[#f1444a] pb-2 w-max">Student Achievement Information System (SAIS) dashboard</h2>
+        <h3 class="text-white text-lg mb-4">Develop a Lines of Inquiry plan</h3>  
+
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/770626373?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Student distribution dashboard"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
         <!--Tabs navigation-->
         <ul
-          class="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
+          class="mb-0 flex list-none flex-row flex-wrap border-b-0 pl-0 bg-[#f9fafc]"
           role="tablist"
           data-te-nav-ref>
           <li role="presentation">
             <a
               href="#tabs-home"
-              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+              class="flex mt-0 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:bg-[#f1444a] data-[te-nav-active]:text-white dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:bg-primary-400 dark:data-[te-nav-active]:text-primary-400"
               data-te-toggle="pill"
               data-te-target="#tabs-home"
               data-te-nav-active
               role="tab"
               aria-controls="tabs-home"
               aria-selected="true"
-              >Home</a
-            >
+              >
+              <img src="img/overview.svg" height="20" width="20" alt="overview" class="items-center justify-center flex-none">
+              <span class="items-center justify-center flex-initial flex ml-2">Overview</span>
+              </a>
           </li>
           <li role="presentation">
             <a
               href="#tabs-profile"
-              class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+              class="flex focus:border-transparent my-0 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
               data-te-toggle="pill"
               data-te-target="#tabs-profile"
               role="tab"
               aria-controls="tabs-profile"
               aria-selected="false"
-              >Profile</a
+              >
+              <img src="img/transcript.svg" height="20" width="20" alt="transcript" class="items-center justify-center flex-none">
+              <span class="items-center justify-center flex-initial flex ml-2">Transcript</span>
+            </a
             >
           </li>
           <li role="presentation">
             <a
               href="#tabs-messages"
-              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+              class="flex my-0 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
               data-te-toggle="pill"
               data-te-target="#tabs-messages"
               role="tab"
               aria-controls="tabs-messages"
               aria-selected="false"
-              >Messages</a
-            >
-          </li>
-          <li role="presentation">
-            <a
-              href="#tabs-contact"
-              class="disabled pointer-events-none my-2 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-400 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600"
-              data-te-toggle="pill"
-              data-te-target="#tabs-contact"
-              role="tab"
-              aria-controls="tabs-contact"
-              aria-selected="false"
-              >Contact</a
-            >
+              >
+              <img src="img/resources.svg" height="20" width="20" alt="resources" class="items-center justify-center flex-none">
+              <span class="items-center justify-center flex-initial flex ml-2">Resources</span>
+          </a>
           </li>
         </ul>
 
         <!--Tabs content-->
-        <div class="mb-6">
+        <div class="mb-6 bg-[#f9fafc] p-2 border-t-4 border-[#f1444a]">
           <div
             class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
             id="tabs-home"
             role="tabpanel"
             aria-labelledby="tabs-home-tab"
             data-te-tab-active>
-            Tab 1 content
+            <p>This video provides introductory information.</p>
+            <p>This video provides introductory information.</p>
+            <p>This video provides introductory information.</p>
+            <p>This video provides introductory information.</p>
           </div>
           <div
             class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
@@ -89,7 +103,11 @@
             id="tabs-messages"
             role="tabpanel"
             aria-labelledby="tabs-profile-tab">
-            Tab 3 content
+            <ul>
+              <li><a href="https://connect.det.wa.edu.au/group/staff/ui/community/summary?coisp=DomainCommunity:796365454#125925_1:137174_1" target="_blank">NAPLAN Online Readiness Community</a></li>
+              <li><a href="https://www.assessform.edu.au/" target="_blank">The Assessment Platform - assessform.edu.au</a></li>
+              <li><a href="https://www.nap.edu.au/online-assessment/FAQs" target="_blank">Australian Curriculum Assessment and Reporting Authority (ACARA)</a></li>
+            </ul>
           </div>
           <div
             class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
@@ -100,14 +118,17 @@
           </div>
         </div>
     </main>
-	<script src="index.js">
-   // Initialization for ES Users
-    import {
-      Tab,
-      initTE,
-    } from "tw-elements";
 
-    initTE({ Tab }); 
-  </script>
+    <footer class="text-center text-white">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+        <img class="w-[80px] mx-auto my-0" width="80" height="15" alt="Creative Commons Licence" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a>
+      <p class="text-base"> &copy; Department of Education WA 2022</p>
+      <p class="text-base">Except where otherwise noted, this content is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+    </footer>
+
+
+
+	<script src="video.js"></script>
+  <script type="module" src="/js/tw-elements.umd.min.js?v=1.0.0-beta2"></script>
   </body>
 </html>
