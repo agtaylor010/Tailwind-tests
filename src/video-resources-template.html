@@ -10,12 +10,32 @@
   </head>
   <body class="border-t-[12px] border-[#f1444a] bg-[#252c36]">
     <main>
+        
         <header class="flex p-4">
           <div class="flex-none w-11/12 mb-9">
             <img src="img/doe-logo.svg" class="w-[242px] h-[104]">
           </div>
           <div class="flex-initial w-1/12 float-right">
-            menu
+            <!-- Toggler -->
+            <button
+              class="mt-10 inline-block rounded p-6 text-white focus:bg-primary-700 focus:outline-none focus:ring-0"
+              data-te-sidenav-toggle-ref
+              data-te-target="#sidenav-5"
+              aria-controls="#sidenav-5"
+              aria-haspopup="true">
+              <span class="block [&>svg]:h-10 [&>svg]:w-10 [&>svg]:text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-10 w-10">
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
           </div>
         </header>
 
@@ -25,8 +45,12 @@
           <h2 class="text-white text-2xl mb-4 border-b-4 border-[#f1444a] pb-2">Student Achievement Information System (SAIS) dashboard</h2>
           <h3 class="text-white text-lg mb-4">Develop a Lines of Inquiry plan</h3>  
         </div>
+
         <!-- Video -->
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/770626373?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Student distribution dashboard"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/770626373?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Student distribution dashboard"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
 
         <!--Tabs navigation-->
         <ul
@@ -51,7 +75,7 @@
           <li role="presentation">
             <a
               href="#tabs-profile"
-              class="flex focus:border-transparent my-0 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+              class="flex focus:border-transparent my-0 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:bg-[#f1444a] data-[te-nav-active]:text-white dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 w-1/3"
               data-te-toggle="pill"
               data-te-target="#tabs-profile"
               role="tab"
@@ -65,7 +89,7 @@
           <li role="presentation">
             <a
               href="#tabs-messages"
-              class="flex my-0 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+              class="flex my-0 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:bg-[#f1444a] data-[te-nav-active]:text-white dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400 w-1/3"
               data-te-toggle="pill"
               data-te-target="#tabs-messages"
               role="tab"
@@ -87,6 +111,17 @@
             aria-labelledby="tabs-home-tab"
             data-te-tab-active>
             
+            <p>This video provides introductory information.</p>
+
+          </div>
+
+          <!--Transcript content-->
+          <div
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-profile"
+            role="tabpanel"
+            aria-labelledby="tabs-profile-tab">
+
             <!-- Play and Download -->
             <div class="flex">
               <div class="w-1/2 flex flex-row items-center p-4">
@@ -152,19 +187,6 @@
               <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
               <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
             </ul>
-
-          </div>
-
-          <!--Transcript content-->
-          <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            id="tabs-profile"
-            role="tabpanel"
-            aria-labelledby="tabs-profile-tab">
-            <p>This video provides introductory information.</p>
-            <p>This video provides introductory information.</p>
-            <p>This video provides introductory information.</p>
-            <p>This video provides introductory information.</p>
           </div>
           
           <!--Resources content-->
@@ -201,6 +223,6 @@
   <script
   type="text/javascript"
   src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
-  
+
   </body>
 </html>
