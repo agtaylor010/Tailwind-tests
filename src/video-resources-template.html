@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="output.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   </head>
-  <body class="border-t-8 border-[#f1444a] bg-[#252c36] p-4">
+  <body class="border-t-[12px] border-[#f1444a] bg-[#252c36]">
     <main>
-
-
-        <header class="flex">
+        <header class="flex p-4">
           <div class="flex-none w-11/12 mb-9">
             <img src="img/doe-logo.svg" class="w-[242px] h-[104]">
           </div>
@@ -21,15 +19,18 @@
           </div>
         </header>
 
-        <h1 class="text-white text-6xl mb-2"><span class="text-[#c8cacd]">NAPLAN</span> Online 2022</h1>
-        <h2 class="text-white text-2xl mb-4 border-b-4 border-[#f1444a] pb-2 w-max">Student Achievement Information System (SAIS) dashboard</h2>
-        <h3 class="text-white text-lg mb-4">Develop a Lines of Inquiry plan</h3>  
-
+        <!-- Headings -->
+        <div class="p-4">
+          <h1 class="text-white text-6xl mb-2"><span class="text-[#c8cacd]">NAPLAN</span> Online 2022</h1>
+          <h2 class="text-white text-2xl mb-4 border-b-4 border-[#f1444a] pb-2">Student Achievement Information System (SAIS) dashboard</h2>
+          <h3 class="text-white text-lg mb-4">Develop a Lines of Inquiry plan</h3>  
+        </div>
+        <!-- Video -->
         <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/770626373?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Student distribution dashboard"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
         <!--Tabs navigation-->
         <ul
-          class="mb-0 flex list-none flex-row flex-wrap border-b-0 pl-0 bg-[#f9fafc]"
+          class="mb-0 flex list-none flex-row border-b-0 pl-0 bg-[#f9fafc]"
           role="tablist"
           data-te-nav-ref>
           <li role="presentation">
@@ -43,8 +44,8 @@
               aria-controls="tabs-home"
               aria-selected="true"
               >
-              <img src="img/overview.svg" height="20" width="20" alt="overview" class="items-center justify-center flex-none">
-              <span class="items-center justify-center flex-initial flex ml-2">Overview</span>
+              <img src="img/overview.svg" height="20" width="20" alt="overview" class="items-center justify-center flex-none fill-[#243c5a]">
+              <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Overview</span>
               </a>
           </li>
           <li role="presentation">
@@ -58,9 +59,8 @@
               aria-selected="false"
               >
               <img src="img/transcript.svg" height="20" width="20" alt="transcript" class="items-center justify-center flex-none">
-              <span class="items-center justify-center flex-initial flex ml-2">Transcript</span>
-            </a
-            >
+              <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Transcript</span>
+            </a>
           </li>
           <li role="presentation">
             <a
@@ -73,12 +73,12 @@
               aria-selected="false"
               >
               <img src="img/resources.svg" height="20" width="20" alt="resources" class="items-center justify-center flex-none">
-              <span class="items-center justify-center flex-initial flex ml-2">Resources</span>
+              <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Resources</span>
           </a>
           </li>
         </ul>
 
-        <!--Tabs content-->
+        <!--Overview content-->
         <div class="mb-6 bg-[#f9fafc] p-2 border-t-4 border-[#f1444a]">
           <div
             class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
@@ -86,49 +86,119 @@
             role="tabpanel"
             aria-labelledby="tabs-home-tab"
             data-te-tab-active>
-            <p>This video provides introductory information.</p>
-            <p>This video provides introductory information.</p>
-            <p>This video provides introductory information.</p>
-            <p>This video provides introductory information.</p>
+            
+            <!-- Play and Download -->
+            <div class="flex">
+              <div class="w-1/2 flex flex-row items-center p-4">
+                <img src="img/play.svg" height="20" width="20" alt="play" class="items-center justify-center flex-none">
+                <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Play Transcript</span>
+              </div>
+              <div class="w-1/2 flex flex-row items-center p-4">
+                <img src="img/download.svg" height="20" width="20" alt="download" class="items-center justify-center flex-initial">
+                <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Download</span>
+              </div>
+            </div>
+
+            <!--Search Bar-->
+            <div class="mb-3">
+              <div class="relative mb-4 flex w-full flex-wrap items-stretch">
+                <input
+                  type="search"
+                  class="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="button-addon1" />
+
+                <!--Search button-->
+                <button
+                  class="relative z-[2] flex items-center rounded-r bg-[#f1444a] px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+                  type="button"
+                  id="button-addon1"
+                  data-te-ripple-init
+                  data-te-ripple-color="light">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5">
+                    <path
+                      fill-rule="evenodd"
+                      d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <ul>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Code DATA)</li>
+              <li class="mb-2 text-[#4F4A56] font-bold">(Transcript text and Time Coide DATA)</li>
+            </ul>
+
           </div>
+
+          <!--Transcript content-->
           <div
             class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
             id="tabs-profile"
             role="tabpanel"
             aria-labelledby="tabs-profile-tab">
-            Tab 2 content
+            <p>This video provides introductory information.</p>
+            <p>This video provides introductory information.</p>
+            <p>This video provides introductory information.</p>
+            <p>This video provides introductory information.</p>
           </div>
+          
+          <!--Resources content-->
           <div
             class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
             id="tabs-messages"
             role="tabpanel"
             aria-labelledby="tabs-profile-tab">
-            <ul>
+            <ul class="list-inside list-disc underline font-bold text-[#0000ff]">
               <li><a href="https://connect.det.wa.edu.au/group/staff/ui/community/summary?coisp=DomainCommunity:796365454#125925_1:137174_1" target="_blank">NAPLAN Online Readiness Community</a></li>
               <li><a href="https://www.assessform.edu.au/" target="_blank">The Assessment Platform - assessform.edu.au</a></li>
               <li><a href="https://www.nap.edu.au/online-assessment/FAQs" target="_blank">Australian Curriculum Assessment and Reporting Authority (ACARA)</a></li>
             </ul>
           </div>
-          <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            id="tabs-contact"
-            role="tabpanel"
-            aria-labelledby="tabs-contact-tab">
-            Tab 4 content
-          </div>
         </div>
     </main>
 
-    <footer class="text-center text-white">
+    <footer class="text-center text-white p-4">
       <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
         <img class="w-[80px] mx-auto my-0" width="80" height="15" alt="Creative Commons Licence" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a>
       <p class="text-base"> &copy; Department of Education WA 2022</p>
       <p class="text-base">Except where otherwise noted, this content is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
     </footer>
 
+	<script>
+    import {
+      Tab,
+      initTE,
+    } from "tw-elements";
 
+    initTE({ Tab });
+  </script>
 
-	<script src="video.js"></script>
   <script type="module" src="/js/tw-elements.umd.min.js?v=1.0.0-beta2"></script>
+  
   </body>
 </html>
