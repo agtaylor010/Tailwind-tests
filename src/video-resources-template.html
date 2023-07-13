@@ -11,33 +11,114 @@
   <body class="border-t-[12px] border-[#f1444a] bg-[#252c36]">
     <main>
         
-        <header class="flex p-4">
-          <div class="flex-none w-11/12 mb-9">
-            <img src="img/doe-logo.svg" class="w-[242px] h-[104]">
-          </div>
-          <div class="flex-initial w-1/12 float-right">
-            <!-- Toggler -->
-            <!-- <button
-              class="mt-10 inline-block rounded p-6 text-white focus:bg-primary-700 focus:outline-none focus:ring-0"
-              data-te-sidenav-toggle-ref
-              data-te-target="#sidenav-5"
-              aria-controls="#sidenav-5"
-              aria-haspopup="true">
-              <span class="block [&>svg]:h-10 [&>svg]:w-10 [&>svg]:text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="h-10 w-10">
-                  <path
-                    fill-rule="evenodd"
-                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                    clip-rule="evenodd" />
-                </svg>
-              </span>
-            </button> -->
-          </div>
+        <header>
+
+          <nav
+            class="relative flex w-full flex-nowrap items-center justify-between py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start lg:py-4"
+            data-te-navbar-ref>
+            <div class="flex w-full flex-wrap items-center justify-between px-3">
+              <div class="ml-2">
+                <a href="#"
+                  ><img src="img/doe-logo.svg" class="w-[150px] h-[64] p-2"></a
+                >
+              </div>
+
+              <button
+                class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                type="button"
+                data-te-collapse-init
+                data-te-target="#navbarSupportedContent2"
+                aria-controls="navbarSupportedContent2"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                
+                <span class="[&>svg]:w-10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="h-10 w-10">
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+
+
+              <div
+                class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto bg-[#FBFBFB] "
+                id="navbarSupportedContent2"
+                data-te-collapse-item>
+
+                <ul
+                  class="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:hidden"
+                  data-te-navbar-nav-ref>
+
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                  <li class="my-4 pl-2" data-te-nav-item-ref>
+                    <a class="" aria-current="page" href="#" data-te-nav-link-ref >[CONTENT]</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </header>
+
 
         <!-- Headings -->
         <div class="p-4">
@@ -69,7 +150,7 @@
               aria-selected="true"
               >
               <img src="img/overview.svg" height="20" width="20" alt="overview" class="items-center justify-center flex-none fill-[#243c5a]">
-              <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Overview</span>
+              <span class="items-center justify-center flex-initial flex ml-2 font-bold">Overview</span>
               </a>
           </li>
           <li role="presentation">
@@ -83,7 +164,7 @@
               aria-selected="false"
               >
               <img src="img/transcript.svg" height="20" width="20" alt="transcript" class="items-center justify-center flex-none">
-              <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Transcript</span>
+              <span class="items-center justify-center flex-initial flex ml-2 font-bold">Transcript</span>
             </a>
           </li>
           <li role="presentation">
@@ -97,7 +178,7 @@
               aria-selected="false"
               >
               <img src="img/resources.svg" height="20" width="20" alt="resources" class="items-center justify-center flex-none">
-              <span class="items-center justify-center flex-initial flex ml-2 font-bold text-base">Resources</span>
+              <span class="items-center justify-center flex-initial flex ml-2 font-bold">Resources</span>
           </a>
           </li>
         </ul>
@@ -105,7 +186,7 @@
         <!--Overview content-->
         <div class="mb-6 bg-[#f9fafc] p-2 border-t-4 border-[#f1444a]">
           <div
-            class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block p-2"
             id="tabs-home"
             role="tabpanel"
             aria-labelledby="tabs-home-tab"
@@ -117,7 +198,7 @@
 
           <!--Transcript content-->
           <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block p-2"
             id="tabs-profile"
             role="tabpanel"
             aria-labelledby="tabs-profile-tab">
@@ -191,11 +272,11 @@
           
           <!--Resources content-->
           <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block p-2"
             id="tabs-messages"
             role="tabpanel"
             aria-labelledby="tabs-profile-tab">
-            <ul class="list-inside list-disc underline font-bold text-[#0000ff]">
+            <ul class="list-outside list-disc underline font-bold text-[#0000ff] ml-2">
               <li><a href="https://connect.det.wa.edu.au/group/staff/ui/community/summary?coisp=DomainCommunity:796365454#125925_1:137174_1" target="_blank">NAPLAN Online Readiness Community</a></li>
               <li><a href="https://www.assessform.edu.au/" target="_blank">The Assessment Platform - assessform.edu.au</a></li>
               <li><a href="https://www.nap.edu.au/online-assessment/FAQs" target="_blank">Australian Curriculum Assessment and Reporting Authority (ACARA)</a></li>
@@ -204,7 +285,7 @@
         </div>
     </main>
 
-    <footer class="text-center text-white p-4">
+    <footer class="text-center text-white p-4 text-xs">
       <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
         <img class="w-[80px] mx-auto my-0" width="80" height="15" alt="Creative Commons Licence" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a>
       <p class="text-base"> &copy; Department of Education WA 2022</p>
@@ -218,6 +299,13 @@
     } from "tw-elements";
 
     initTE({ Tab });
+
+    import {
+      Collapse,
+      initTE,
+    } from "tw-elements";
+
+    initTE({ Collapse });
   </script>
 
   <script
