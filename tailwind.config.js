@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
     screens: {
-      'sm': {'max': '639px'},
+      'xsm': {'max': '419px'},
 
     },
     fontFamily: {
