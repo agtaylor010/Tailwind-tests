@@ -4737,8 +4737,34 @@ video {
     margin-left: 0px;
   }
 
+  .xsm\:ml-1 {
+    margin-left: 0.25rem;
+  }
+
   .xsm\:hidden {
     display: none;
+  }
+
+  .xsm\:w-auto {
+    width: auto;
+  }
+
+  .xsm\:w-min {
+    width: -moz-min-content;
+    width: min-content;
+  }
+
+  .xsm\:flex-none {
+    flex: none;
+  }
+
+  .xsm\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .xsm\:text-center {
+    text-align: center;
   }
 }
 
