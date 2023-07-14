@@ -1369,6 +1369,10 @@ video {
   width: 100vw;
 }
 
+.w-\[1024px\] {
+  width: 1024px;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1427,6 +1431,10 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-\[1024px\] {
+  max-width: 1024px;
 }
 
 .flex-1 {
