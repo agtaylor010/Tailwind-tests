@@ -7,6 +7,7 @@ module.exports = {
       'body': ['"puffin-display-soft"'],
     },
     extend: {
+      screens: { 'sm': { 'max': '640px' } },
       colors: {
         primary: '#3F2B56',
         secondary: '#9e0f6d'
