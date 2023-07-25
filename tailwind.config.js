@@ -2,10 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
-    screens: {
-      'xsm': {'max': '419px'},
-
-    },
+    // screens: {
+    //   'tablet': '480px',
+    // },
     fontFamily: {
       'display': ['puffin-display'],
       'body': ['"puffin-display-soft"'],
