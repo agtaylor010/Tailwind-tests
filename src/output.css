@@ -5239,6 +5239,10 @@ video {
     background-size: 220px 230px;
   }
 
+  .lg\:bg-\[length\:230px_230px\] {
+    background-size: 230px 230px;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
