@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TailwindCSS Template</title>
+		<link rel="stylesheet" type="text/css" href="output.css">
+	</head>
+	<body>
+		<div><!--wrapper-->
+
+			<!-- Bot Character -->
+			<div class="fixed right-0 top-32 hidden sm:block float-right"> 
+				<iframe src="botcharacter.html" title="bot" height="250" width="250" class=""></iframe>
+			</div>
+
+
+			<header class="mb-20">
+				<div class="md:flex items-center bg-primary">	
+					<div class="md:p-12 flex justify-between items-center">
+						<h1>
+							<a href="/">
+								<img src="img/doe-logo.svg" alt="logo" width="245" height="104" class="w-60 p-10 md:p-0">
+							</a>
+						</h1>
+						<div class="px-4 cursor-pointer md:hidden" id="burger">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-white justify-right">
+  								<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+							</svg>
+						</div>
+					</div>
+					<nav class="w-full text-center">
+						<ul class="md:flex items-center md:float-right hidden" id="menu">
+							<li class="p-4 text-xl md:text-base md:mr-4 text-white/50 hover:text-white font-bold transition ease-in-out md:border-b-2 md:border-white border-b border-white/20"><a href="#">About</a></li>
+							<li class="p-4 text-xl md:text-base md:mr-4 text-white/50 hover:text-white font-bold transition ease-in-out md:border-b-2 md:border-primary border-b border-white/20"><a href="#">Contact</a></li>
+							<li class="p-4 text-xl md:text-base md:md:mr-4 text-white/50 hover:text-white font-bold transition ease-in-out md:border-b-2 md:border-primary border-b border-white/20"><a href="#">FAQ</a></li>
+							<li class="p-4 text-xl md:text-base md:mr-4 text-white/50 hover:text-white font-bold transition ease-in-out md:border-b-2 md:border-primary border-b border-white/20"><a href="#">Help</a></li>
+						</ul>
+					</nav>
+					<div class="w-1/2 pr-12">
+						<form id="form" class="md:flex md:float-right hidden"> 
+						  <input class="border-2 border-grey-500 px-2" type="search" id="query" name="q" placeholder="Search...">
+						  <button type="submit" class="border-2 border-white px-6 ml-2 rounded-2xl bg-white hover:bg-primary hover:text-white transition ease-in-out">Search</button>
+						</form>
+					</div>
+				</div>
+			</header>
+
+			
+
+			<main class="w-3/4 mx-auto">
+				
+				<div>
+					<div class="justify-center">
+						<h1 class="text-4xl text-primary uppercase mb-16">Heading of the Page</h1>
+					</div>
+				</div>
+		
+	
+				<div>
+					<div>
+						<article>
+							<h2 class="text-2xl mb-4 font-bold">Heading</h2>
+							<p class="text-lg mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p class="text-lg mb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+							<p class="text-lg mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							
+						</article>
+
+						<div class="md:flex md:flex-row mb-12">
+						  <div class="basis-1/4">
+						  	<img src="img/nightsky.webp" alt="night" class="rounded hover:shadow-primary/40 hover:shadow-md hover:scale-[1.02] cursor-pointer shadow-md shadow-primary/40 transition ease-in-out">
+						  </div>
+						  <div class="basis-3/4">
+						  	<p class="text-lg my-8 md:my-0 md:pl-12">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+						  </div>
+						</div>
+
+						<div class="md:flex md:flex-row">
+						  
+						  <div class="basis-3/4">
+						  	<p class="text-lg mb-8 pr-12">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+						  </div>
+
+						  <!-- <div class="hidden md:flex md:justify-center md:-space-x-14 md:base-1/4">
+							  <div class="w-48 h-48 mix-blend-color-burn bg-blue-400 rounded-full hover:mix-blend-color-dodge cursor-pointer transition ease-in-out"></div>
+							  <div class="w-48 h-48 mix-blend-color-burn bg-pink-400 rounded-full hover:mix-blend-color-dodge cursor-pointer transition ease-in-out"></div>
+						  </div> -->
+
+						  <div class="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+							  <div class="animate-pulse flex space-x-4">
+							    <div class="rounded-full bg-slate-200 h-10 w-10"></div>
+							    <div class="flex-1 space-y-6 py-1">
+							      <div class="h-2 bg-slate-200 rounded"></div>
+							      <div class="space-y-3">
+							        <div class="grid grid-cols-3 gap-4">
+							          <div class="h-2 bg-slate-200 rounded col-span-2"></div>
+							          <div class="h-2 bg-slate-200 rounded col-span-1"></div>
+							        </div>
+							        <div class="h-2 bg-slate-200 rounded"></div>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+				</div>
+
+				<!-- Bouncing Arrow -->
+				<div class="relative rounded-xl overflow-auto p-8">
+					<div class="flex justify-center">
+						<div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+							<svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+							<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+							</svg>
+						</div>
+					</div>
+				</div>
+
+
+				<!--Team-->
+				<div class="bg-white py-24 sm:py-32">
+				  <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+				    <div class="max-w-2xl">
+				      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
+				      <p class="mt-6 text-lg leading-8 text-gray-600">Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse.</p>
+				    </div>
+				    <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+				      <li>
+				        <div class="flex items-center gap-x-6">
+				          <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+				          <div>
+				            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
+				            <p class="text-sm font-semibold leading-6 text-primary">Co-Founder / CEO</p>
+				          </div>
+				        </div>
+				      </li>
+
+				      <li>
+				        <div class="flex items-center gap-x-6">
+				          <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+				          <div>
+				            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
+				            <p class="text-sm font-semibold leading-6 text-primary">Co-Founder / CEO</p>
+				          </div>
+				        </div>
+				      </li>
+
+				      <li>
+				        <div class="flex items-center gap-x-6">
+				          <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+				          <div>
+				            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
+				            <p class="text-sm font-semibold leading-6 text-primary">Co-Founder / CEO</p>
+				          </div>
+				        </div>
+				      </li>
+
+				      <li>
+				        <div class="flex items-center gap-x-6">
+				          <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+				          <div>
+				            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
+				            <p class="text-sm font-semibold leading-6 text-primary">Co-Founder / CEO</p>
+				          </div>
+				        </div>
+				      </li>
+
+				      <li>
+				        <div class="flex items-center gap-x-6">
+				          <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+				          <div>
+				            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
+				            <p class="text-sm font-semibold leading-6 text-primary">Co-Founder / CEO</p>
+				          </div>
+				        </div>
+				      </li>
+
+				      <li>
+				        <div class="flex items-center gap-x-6">
+				          <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+				          <div>
+				            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
+				            <p class="text-sm font-semibold leading-6 text-primary">Co-Founder / CEO</p>
+				          </div>
+				        </div>
+				      </li>
+				    </ul>
+				  </div>
+				</div>
+
+
+				<!-- Bouncing Arrow -->
+				<div class="relative rounded-xl overflow-auto p-8">
+					<div class="flex justify-center">
+						<div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+							<svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+							<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+							</svg>
+						</div>
+					</div>
+				</div>
+
+		
+				<div class="mt-12 md:mb-12">
+					<!--Cards-->
+					<h3 class="font-light text-2xl mb-4 justify-self-auto">Left heading</h3>
+					
+					<div class="md:flex space-x-4">
+						<div class="md:border-4 md:border-primary/20 md:p-10 md:w-1/3 md:rounded-2xl mb-20">
+							<img src="img/nightsky.webp" alt="night">
+
+								<h3 class="mb-4 mt-12 font-bold text-2xl">Heading 3A</h3>
+								<p class="text-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+								<button class="w-full bg-primary rounded text-white p-4 my-4 font-bold hover:bg-secondary transition ease-in-out hover:scale-[1.02]">Read More &#187;</button>
+						</div>
+						<div class="md:border-4 md:border-primary/20 md:p-10 md:w-1/3 md:rounded-2xl mb-20">
+							<img src="img/nightsky.webp" alt="night">
+
+								<h3 class="mb-4 mt-12 font-bold text-2xl">Heading 3B</h3>
+								<p class="text-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+								<button class="w-full bg-primary rounded text-white p-4 my-4 font-bold hover:bg-secondary transition ease-in-out hover:scale-[1.02]">Read More &#187;</button>
+						</div>
+						<div class="md:border-4 md:border-primary/20 md:p-10 md:w-1/3 md:rounded-2xl mb-20">
+							<img src="img/nightsky.webp" alt="night">
+
+								<h3 class="mb-4 mt-12 font-bold text-2xl">Heading 3C</h3>
+								<p class="text-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+								<button class="w-full bg-primary rounded text-white p-4 my-4 font-bold hover:bg-secondary transition ease-in-out hover:scale-[1.02]">Read More &#187;</button>
+						</div>	
+					</div>	
+										
+				</div>
+			</main>
+			<footer class="mt-12 mb-12">
+				<div class="justify-center text-center">
+					<p>&copy; Copyright <a href="#" class="text-grey/50 hover:text-secondary transition ease-in-out">Your Site</a> &#124; <a href="#" class="text-grey/50 hover:text-secondary transition ease-in-out">Terms of Use</a> &#124; <a href="#" class="text-grey/50 hover:text-secondary transition ease-in-out">Privacy Policy</a></p>
+				</div>
+			</footer>
+		</div>
+
+		<script type="text/javascript" src="index.js"></script>
+
+	</body>
+</html>
