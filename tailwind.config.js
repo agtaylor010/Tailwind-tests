@@ -10,6 +10,9 @@ module.exports = {
       'body': ['"puffin-display-soft"'],
     },
     extend: {
+      backgroundImage: {
+        'banner': "url('/img/banner.png')",
+      },
       colors: {
         primary: '#3F2B56',
         secondary: '#9e0f6d'
