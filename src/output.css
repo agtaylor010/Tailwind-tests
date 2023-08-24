@@ -2396,6 +2396,18 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'img\/resources-for-schools\.png\'\)\] {
+  background-image: url('img/resources-for-schools.png');
+}
+
+.bg-\[url\(\'img\/resources-for-education-regional-office\.png\'\)\] {
+  background-image: url('img/resources-for-education-regional-office.png');
+}
+
+.bg-\[url\(\'img\/supporting-resources\.png\'\)\] {
+  background-image: url('img/supporting-resources.png');
+}
+
 .from-\[\#3f2b56\] {
   --tw-gradient-from: #3f2b56 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(63 43 86 / 0) var(--tw-gradient-to-position);
@@ -5006,6 +5018,10 @@ video {
 
   .md\:w-\[24px\] {
     width: 24px;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:basis-1\/2 {
