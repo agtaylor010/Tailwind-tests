@@ -1218,6 +1218,14 @@ video {
   height: 100vh;
 }
 
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
 .max-h-\[calc\(100\%-64px\)\] {
   max-height: calc(100% - 64px);
 }
@@ -1405,6 +1413,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[70px\] {
+  width: 70px;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .min-w-0 {
