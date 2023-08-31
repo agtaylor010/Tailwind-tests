@@ -2831,6 +2831,11 @@ input[type="range"]:active::-webkit-slider-thumb {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#442d59\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(68 45 89 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'img\/course-splash-img\.png\'\)\] {
   background-image: url('img/course-splash-img.png');
 }
@@ -4375,6 +4380,11 @@ input[type="range"]:active::-webkit-slider-thumb {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[\#5d2e87\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(93 46 135 / var(--tw-bg-opacity));
+}
+
 .hover\:fill-\[\#8b8b8b\]:hover {
   fill: #8b8b8b;
 }
@@ -4557,6 +4567,15 @@ input[type="range"]:active::-webkit-slider-thumb {
 .focus\:bg-red-700:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.focus\:bg-\[\#6b6b5\]:focus {
+  background-color: #6b6b5;
+}
+
+.focus\:bg-\[\#06b6b5\]:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 181 / var(--tw-bg-opacity));
 }
 
 .focus\:text-\[\#3b71ca\]:focus {
@@ -4845,6 +4864,15 @@ input[type="range"]:active::-webkit-slider-thumb {
 .active\:bg-red-800:active {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+.active\:bg-\[\#6b6b5\]:active {
+  background-color: #6b6b5;
+}
+
+.active\:bg-\[\#06b6b5\]:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 181 / var(--tw-bg-opacity));
 }
 
 .active\:text-neutral-800:active {
