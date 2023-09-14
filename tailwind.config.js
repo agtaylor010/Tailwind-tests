@@ -9,6 +9,7 @@ module.exports = {
       'display': ['puffin-display'],
       'body': ['"puffin-display-soft"'],
       MullerDOE: ["MullerDOE", "cursive"],
+      MullerDOEBold: ["MullerDOE-Bold", "cursive"],
     },
     extend: {
       backgroundImage: {

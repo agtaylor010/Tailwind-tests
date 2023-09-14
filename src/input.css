@@ -12,3 +12,8 @@
   font-family: "MullerDOE";
   src: url("fonts/MullerDOE-Regular.woff");
 }
+
+@font-face {
+  font-family: "MullerDOE-Bold";
+  src: url("fonts/MullerDOE-Bold.woff");
+}
