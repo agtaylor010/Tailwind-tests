@@ -2518,6 +2518,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   border-top-width: 12px;
 }
 
+.border-t-8 {
+  border-top-width: 8px;
+}
+
 .\!border-solid {
   border-style: solid !important;
 }
@@ -2616,6 +2620,11 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .border-white\/20 {
   border-color: rgb(255 255 255 / 0.2);
+}
+
+.border-\[\#a50a66\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(165 10 102 / var(--tw-border-opacity));
 }
 
 .border-t-transparent {
