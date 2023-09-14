@@ -853,6 +853,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   top: 100%;
 }
 
+.bottom-auto {
+  bottom: auto;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -5715,6 +5719,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 @media (min-width: 640px) {
+  .sm\:bottom-auto {
+    bottom: auto;
+  }
+
   .sm\:mb-0 {
     margin-bottom: 0px;
   }
