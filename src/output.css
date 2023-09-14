@@ -2857,6 +2857,10 @@ input[type="range"]:active::-webkit-slider-thumb {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'img\/pattern\.png\'\)\] {
+  background-image: url('img/pattern.png');
+}
+
 .from-primary {
   --tw-gradient-from: #3F2B56 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(63 43 86 / 0) var(--tw-gradient-to-position);
@@ -3916,6 +3920,11 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .grayscale {
   --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.sepia {
+  --tw-sepia: sepia(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -5893,6 +5902,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 
   .sm\:gap-y-16 {
     row-gap: 4rem;
+  }
+
+  .sm\:border-4 {
+    border-width: 4px;
   }
 
   .sm\:p-12 {
