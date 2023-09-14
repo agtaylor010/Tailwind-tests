@@ -8,6 +8,7 @@ module.exports = {
     fontFamily: {
       'display': ['puffin-display'],
       'body': ['"puffin-display-soft"'],
+      MullerDOE: ["MullerDOE", "cursive"],
     },
     extend: {
       backgroundImage: {

@@ -7,3 +7,8 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "MullerDOE";
+  src: url("fonts/MullerDOE-Regular.woff");
+}
