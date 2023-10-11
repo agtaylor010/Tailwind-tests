@@ -17,3 +17,47 @@
   font-family: "MullerDOE-Bold";
   src: url("fonts/MullerDOE-Bold.woff");
 }
+
+@layer utilities {
+  .bordered-box {
+    border-image: linear-gradient(#fdc432, #e94f36) 30;
+    border-width: 4px;
+    border-style: solid;
+  }
+  .Button:after, .Button:before {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+  }
+  .Button.Curriculum:before {
+    content: '\f518';
+  }
+  .Button.Share:before {
+    content: "\f1e0";
+  }
+  .Button.Link:before {
+    content: "\f0c1";
+  }
+  .Button.Email:before {
+    content: "\f0e0";
+  }
+  .Button.Copy:before {
+    content: "\f0c5";
+  }
+  .Button.Play:before {
+    content: "\f04b";
+  }
+  .Button.Documents:before {
+    content: "\f15c";
+  }
+  .Button.Connect:before {
+    content: url(img/iconConnect.svg);
+    height: 14px !important;
+    display: block !important;
+  }
+  .Button.ExternalLink:after {
+    content: "\f35d";
+  }
+  .Button.Download:before {
+    content: "\f56d";
+  }
+}
