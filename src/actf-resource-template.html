@@ -28,11 +28,12 @@
 
 		<main class="lg:w-[1024px] mx-auto">
 
+			<!--Trailer-->
 			<div class="trailer mt-4 bg-[#242424] p-6 bg-gradient-to-t from-[#1e2124] to-[#2e3237]">
 				<div class="md:flex md:flex-row">
 				  <div class="md:basis-1/2">
 				  	<div class="bg-[url('img/trailer-thumbnail.jpg')] bg-cover text-white h-[275px] flex items-center justify-center">
-				  		<button class="w-[128px] h-[128px] p-4 bg-black/80 text-[#fdd446] font-medium hover:text-black hover:bg-[#fdd446] transition text-center rounded-full block"><span class="Button Play text-2xl"></span><br><span class="uppercase text-2xl">Play</span><br>{XX}min</button>
+				  		<button class="w-[128px] h-[128px] p-4 bg-black/80 text-[#fdd446] font-medium hover:text-black hover:bg-[#fdd446] ease-in-out transition text-center rounded-full block duration-300 hover:shadow-lg"><span class="Button Play text-2xl"></span><br><span class="uppercase text-2xl">Play</span><br>{XX}min</button>
 				  	</div>
 				  </div>
 				  <div class="md:basis-1/2 md:pl-4 relative">
@@ -581,8 +582,60 @@
 			<div class="flex">
 				<img src="img/logo-doe.svg" alt="Department of Education" class="block h-16 flex-auto" height="64"><img src="img/logo-actf.svg" alt="ACTF" class="block h-16 flex-auto" height="64">
 			</div>
-			<p class="pt-4">&copy; Department of Education WA 2021</p>
+			<p class="pt-4">&copy; Department of Education WA 2021 | <a href="#" class="underline hover:text-black hover:bg-[#fdd446] transition" data-te-toggle="modal" data-te-target="#Copyright"  data-te-ripple-init data-te-ripple-color="light">Copyright and terms of use</a></p>
 		</footer>
+
+
+		<!--Copyright modal-->
+			<div
+			  data-te-modal-init
+			  class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+			  id="Copyright"
+			  tabindex="-1"
+			  aria-labelledby="exampleModalCenterTitle"
+			  aria-modal="true"
+			  role="dialog">
+			  <div
+			    data-te-modal-dialog-ref
+			    class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[800px]">
+			    <div
+			      class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+			      <div
+			        class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+			        <!--Modal title-->
+			        <h5
+			          class="text-xl font-medium leading-normal text-neutral-800 dark:text-neutral-200"
+			          id="exampleModalCenterTitle">
+			          Copyright and terms of use
+			        </h5>
+			        <!--Close button-->
+			        <button
+			          type="button"
+			          class="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
+			          data-te-modal-dismiss
+			          aria-label="Close">
+			          <svg
+			            xmlns="http://www.w3.org/2000/svg"
+			            fill="none"
+			            viewBox="0 0 24 24"
+			            stroke-width="1.5"
+			            stroke="currentColor"
+			            class="h-6 w-6">
+			            <path
+			              stroke-linecap="round"
+			              stroke-linejoin="round"
+			              d="M6 18L18 6M6 6l12 12" />
+			          </svg>
+			        </button>
+			      </div>
+
+			      <!--Modal body-->
+			      <div class="relative p-4">
+					<p>Apart from any use as permitted under the Copyright Act 1968, no part of this work may be reproduced by any process without the prior written permission from the Department of Education Western Australia. Requests and inquiries concerning reproduction and rights should be addressed to Principal Consultant Intellectual Property and Copyright.</p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
 
 		<script src="index.js"></script>
 		<script>
