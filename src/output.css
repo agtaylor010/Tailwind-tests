@@ -6307,6 +6307,10 @@ input[type="range"]:active::-webkit-slider-thumb {
     width: 16.666667%;
   }
 
+  .lg\:w-\[1024px\] {
+    width: 1024px;
+  }
+
   .lg\:basis-1\/4 {
     flex-basis: 25%;
   }
@@ -6358,6 +6362,11 @@ input[type="range"]:active::-webkit-slider-thumb {
   .lg\:py-\[5\%\] {
     padding-top: 5%;
     padding-bottom: 5%;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pl-\[26px\] {
