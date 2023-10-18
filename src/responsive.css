@@ -1,0 +1,138 @@
+/*Responsive Styling*/
+
+@media only screen and (min-width: 320px) and (max-width: 1280px) {
+
+	main {
+		margin: 0;
+	}
+
+	main {
+		width: auto;
+		margin: 0;
+		padding: calc(1rem + 2vw);;
+		box-shadow: 0 ; 
+	}
+
+	section p, section ul, section ol, iframe > figcaption, button {
+		margin-bottom: 2rem;
+	}
+
+	h1 {
+		font-size: calc(2.5rem + 3vw);
+	}
+
+	header h1 {
+		margin-left: 0; 
+	}
+
+	.lesson-description {
+		font-size: calc(1rem + 0.390625vw);
+	}
+
+	h2 {
+		font-size: calc(2.5rem - 0.390625vw);
+
+	}
+
+	h3 {
+		font-size: calc(1.5rem + 0.390625vw);
+		margin-top: calc(4rem + 0.390625vw);
+	}
+
+	h4 {
+		font-size: calc(1rem + 0.390625vw);
+	}
+
+	table {
+		font-size: calc(1rem + 0.390625vw);
+	}
+
+	p, ol, li, span {
+	  font-size: calc(1rem + 0.390625vw);
+	  line-height: calc(1.5rem + 0.390625vw);
+	}
+
+	.darkquote p, .lightquote p {
+		line-height: 2rem;
+		font-size: calc(1.5rem + 0.390625vw);
+	}
+
+	.darkquotecaption, .lightquotecaption {
+		line-height: 1rem;
+		font-size: calc(1rem + 0.390625vw);
+	}
+
+	.darkquote, .lightquote {
+		padding: 1rem;
+	}
+
+	.block-corner-quote blockquote {
+		padding: 3rem 1rem 0 1rem;
+	}
+
+	.block-corner-quote figcaption {
+		padding: 0 1rem 3rem 1rem;
+	}
+
+/*	figcaption {
+	  font-size: 1rem;
+	  line-height: 1.5rem;
+	  margin-top: .6rem;
+	  margin-bottom: 1rem;
+	}*/
+
+	ul, ol {
+		margin-left: 1rem;
+	}
+
+	li {
+		margin-bottom: 1rem;
+	}
+
+	ul li::marker {
+	  font-size: 1rem;
+	}
+
+	.sub-bullets {
+		list-style: circle;
+		margin-left: 1rem;
+	}
+
+	.list-lead {
+		margin-bottom: 1rem;
+	}
+
+	hr {
+	  margin-top: calc(2rem + 0.390625vw);
+	  margin-bottom: calc(10rem + 0.390625vw);
+	}
+
+	.ms-icon {
+		max-width: calc(3rem + 0.390625vw) ;
+	}
+
+	.assess-header, .quiz-header {
+		padding: calc(1rem + 2vw);;
+	}
+
+	.assess-header h1, .quiz-header h1 {
+		font-family: var( --font-display );
+		font-size: calc(2.5rem + 3vw);
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	.lesson-description {
+		font-family: var( --font-display );
+		font-size: calc(1rem + 0.390625vw);
+		color: var( --color-primary-invert ) ;
+	}
+
+}
+
+/*Cells & Columns*/
+
+@media (min-width: 768px) {
+  .column3 { grid-template-columns: repeat(3, 1fr); }
+}
+

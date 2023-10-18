@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arise: Quiz Slider</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" id="theme">
+    <link rel="stylesheet" href="responsive.css">
+    <!--<link rel="stylesheet" href="content-animation.css">--> <!--Turn on/off content animation here-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+
+  <!--REMOVE when implementing - this just allows to toggle between the 2 themes-->
+  <style type="text/css">
+    
+    submit {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    .toggleBtns {
+      background-color: dark-grey;
+      position: fixed;
+    }
+
+  </style>
+
+  <body>
+
+      <main class="quiz">
+
+      <template>
+        <va-carousel
+          :items="items"
+          stateful
+          indicators
+          infinite
+          swipable
+        />
+      </template>
+
+      <script setup lang="ts">
+      const items = [
+        "https://picsum.photos/1500",
+        "https://picsum.photos/1501",
+        "https://picsum.photos/1502",
+        "https://picsum.photos/1503",
+        "https://picsum.photos/1504",
+      ];
+      </script>
+    </main>
+
+
+  </body>
+</html>

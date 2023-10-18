@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arise: Lesson Page</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" id="theme">
+    <link rel="stylesheet" href="responsive.css">
+    <!--<link rel="stylesheet" href="content-animation.css">--> <!--Turn on/off content animation here-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+
+  <!--REMOVE when implementing - this just allows to toggle between the 2 themes-->
+  <style type="text/css">
+    
+    submit {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    .toggleBtns {
+      background-color: dark-grey;
+      position: fixed;
+    }
+
+  </style>
+
+  <body>
+
+      <!--This just enables you to switch between light and dark themes-->
+      <div class="toggleBtns">
+        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+      </div>
+      <script>
+        // change stylesheet using JavaScript
+        function changeSheet(sheet) {
+           var style = document.getElementById('theme');
+           style.setAttribute('href', sheet);
+        }
+      </script>
+      <!--Toggle End-->
+
+      <main>
+
+      <header>
+          <span class="material-symbols-outlined">book</span>
+	        <h1 class="fade-in">Megibility</h1>
+	        <p class="lesson-description">Jearn about legibility in the context of online learning.</p>
+          <hr class="head-divider">
+    	</header>
+
+      <!--SECTION 2-->
+      <section>
+      	<h2 class="pagebreak">There are a great many people in the country today, who through no fault of their own, are sane.</h2>
+
+      	<h3>Sub heading</h3>
+
+        <h4>Small Heading</h4>
+
+      	<p>Functional accessibility in typography includes legibility and readability among other things, and often the two terms are applied interchangeably. It is important to have a clear definition of what each does to be able to identify a potential accessibility hurdle. A great variety of factors can of course affect the legibility of a typeface and the readability of a typographic setting. For avoidance of misunderstanding, the below descriptions of legibility and readability are based on neuroscientific definitions and are used for objective testing.</p>
+
+      	<p>Legibility is the definition of how quickly and accurately a <strong>reader can recognise a character</strong> in any given writing system, in any given language. This is purely about the shaping of a character and when legibility testing is applied, external factors such as reading conditions and the test participant abilities need to be taken into account. Legibility testing is usually carried out by presenting the participant with a single character starting with a very short duration of a few milliseconds. <a href="https://www.education.wa.edu.au/" target="_blank">The duration is increased until the participant</a> can correctly identify a series of characters. The lower the duration with a large count of correct answers, the better the legibility. Legibility is an objective measure and does not depend on emotional factors.</p>
+
+        <!--3 Column Blocks-->
+        <div class="column3">
+          <div class="cell">
+            <img src="img/learning.webp" alt="world class" width="1920" height="1280">
+            <h3>Classroom</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="cell">
+            <img src="img/nightsky.webp" alt="lovely night sky with milky way" width="1920" height="1280">
+            <h3>Night Sky</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="cell">
+            <img src="img/chemicals.webp" alt="some very dangerous substances" width="1920" height="1280">
+            <h3>Chemicals</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+
+      	<p>All writing systems contain characters that have likeness <em>with one another and create ambiguity</em>. The degree of ambiguity depends on the actual design of the typeface and the size at which characters are presented: smaller characters may need more effort than larger ones to be correctly identified.</p>
+
+        <!--SECTION WITH DARK QUOTE-->
+          <figure class="darkquote pagebreak">
+              <blockquote cite="https://www.huxley.net/bnw/four.html">
+                  <p>"Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced."</p>
+              </blockquote>
+              <figcaption class="darkquotecaption">~ Aldous Huxley, <cite>Brave New World</cite></figcaption>
+          </figure>
+
+      	<hr>
+      </section>
+
+  
+      <!--SECTION 3-->
+      <section>
+        <h2 class="pagebreak">Are you suggesting that coconuts migrate?</h2>
+
+        <h3>Sub heading</h3>
+
+        <p>Functional accessibility in typography includes legibility and readability among other things, and often the two terms are applied interchangeably. It is important to have a clear definition of what each does to be able to identify a potential accessibility hurdle. A great variety of factors can of course affect the legibility of a typeface and the readability of a typographic setting. For avoidance of misunderstanding, the below descriptions of legibility and readability are based on neuroscientific definitions and are used for objective testing.</p>
+
+        <!--SECTION WITH LIGHT QUOTE-->
+        <figure class="lightquote pagebreak">
+            <div class="block-corner-quote">
+              <blockquote cite="https://www.huxley.net/bnw/four.html">
+                  <p>"Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced."</p>
+              </blockquote>
+              <figcaption class="lightquotecaption">~ Aldous Huxley, <cite>Brave New World</cite></figcaption>
+          </div>
+        </figure>
+
+        <p>Legibility is the definition of how quickly and accurately a reader can recognise a character in any given writing system, in any given language. This is purely about the shaping of a character and when legibility testing is applied, external factors such as reading conditions and the test participant abilities need to be taken into account. Legibility testing is usually carried out by presenting the participant with a single character starting with a very short duration of a few milliseconds. The duration is increased until the participant can correctly identify a series of characters. The lower the duration with a large count of correct answers, the better the legibility. Legibility is an objective measure and does not depend on emotional factors.</p>
+
+        <div class="icon-bullet">
+            <div class="ms-icon">
+              <span class="material-symbols-outlined">eco</span>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="ms-icon">
+              <span class="material-symbols-outlined">pets</span>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="ms-icon">
+              <span class="material-symbols-outlined">water_drop</span>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+
+        <p>All writing systems contain characters that have likeness with one another and create ambiguity. The degree of ambiguity depends on the actual design of the typeface and the size at which characters are presented: smaller characters may need more effort than larger ones to be correctly identified.</p>
+
+        <h4>Small Heading</h4>
+
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <ul class="sub-bullets">
+                <li>Sub Item 1</li>
+                <li>Sub Item 1</li>
+                <li>Sub Item 1</li>
+                <li>Sub Item 1</li>
+            </ul>
+          </li>
+          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+          <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+          <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</li>
+          <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+          <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>  
+        </ul>
+
+        <h3>Sub heading</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <p>Eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Sed ut perspiciatis unde omnis iste natus error <a href="https://www.education.wa.edu.au/" target="_blank">sit voluptatem accusantium doloremque</a> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+        <div class="svg-animation-frame">
+          <object type="image/svg+xml" data="https://cdn.svgator.com/images/2023/03/stopwatch-svg-animation.svg" alt="Simple animated stopwatch" img="" width="100%"></object>
+        </div>
+        <figure>
+          <figcaption>Fig.3 - Ooooh, a shiny, animated thingybabob!</figcaption>
+        </figure>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <p>Eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Sed ut perspiciatis unde omnis iste natus error <a href="https://www.education.wa.edu.au/" target="_blank">sit voluptatem accusantium doloremque</a> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+        <h3>Sub heading</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <p>Eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Sed ut perspiciatis unde omnis iste natus error <a href="https://www.education.wa.edu.au/" target="_blank">sit voluptatem accusantium doloremque</a> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+
+        <!-- Table Styling -->
+        <table>
+          <thead>
+            <tr>
+              <th colspan="4">Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="subheader">
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+            </tr>
+            <tr>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+            </tr>
+            <tr>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+            </tr>
+            <tr>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+            </tr>
+            <tr>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+            </tr>
+            <tr>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+              <td>Item one</td>
+            </tr>
+          </tbody>
+        </table>
+        <figure>
+          <figcaption>Fig.4 - This table displays some very interesting statistics.</figcaption>
+        </figure>
+
+        <p>Eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Sed ut perspiciatis unde omnis iste natus error <a href="https://www.education.wa.edu.au/" target="_blank">sit voluptatem accusantium doloremque</a> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+        <hr>
+      </section>
+
+
+      <!--SECTION 4-->
+      <section>
+        <h2 class="pagebreak">Have you got anything without spam?</h2>
+
+        <p>Functional accessibility in <a href="https://www.education.wa.edu.au/" target="_blank">typography includes legibility and readability</a> among other things, and often the two terms are applied interchangeably. It is important to have a clear definition of what each does to be able to identify a potential accessibility hurdle. A great variety of factors can of course affect the legibility of a typeface and the readability of a typographic setting. For avoidance of misunderstanding, the below descriptions of legibility and readability are based on neuroscientific definitions and are used for objective testing.</p>
+
+        <iframe class="youtube-video" src="https://www.youtube-nocookie.com/embed/QumfkMQr47M" href="https://www.youtube-nocookie.com/embed/QumfkMQr47M" title="ChatGPT Writes a Chatbot AI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <img class="thumbnail" src="https://i.ytimg.com/vi/QumfkMQr47M/maxresdefault.jpg" width="1920" height="1080" alt="ChatGPT Writes a Chatbot AI">
+        <figure>
+          <figcaption>Fig.5 - A video about ChatGPT <a class="video-url" href="https://www.youtube-nocookie.com/embed/QumfkMQr47M"></a></figcaption>
+
+        </figure>
+
+        <p>Legibility is the definition of how quickly and accurately a reader can recognise a character in any given writing system, in any given language. This is purely about the shaping of a character and when legibility testing is applied, external factors such as reading conditions and the test participant abilities need to be taken into account. Legibility testing is usually carried out by presenting the participant with a single character starting with a very short duration of a few milliseconds. The duration is increased until the participant can correctly identify a series of characters. The lower the duration with a large count of correct answers, the better the <a href="https://www.education.wa.edu.au/" target="_blank">legibility</a>. Legibility is an objective measure and does not depend on emotional factors.</p>
+
+        <h3>Sub heading</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <p>Eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Sed ut perspiciatis unde omnis iste natus error <a href="https://www.education.wa.edu.au/" target="_blank">sit voluptatem accusantium doloremque</a> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+        <p>All writing systems contain characters that have likeness with one another and create ambiguity. The degree of ambiguity depends on the actual design of the typeface and the size at which characters are presented: smaller characters may need more effort than larger ones to be correctly identified.</p>
+
+        <p class="list-lead">These can be identified by:</p>
+
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+          <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+          <li>Sed ut perspiciatis unde omnis iste natus error <a href="https://www.education.wa.edu.au/" target="_blank">sit voluptatem accusantium doloremque</a> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</li>
+          <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+          <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>  
+        </ol>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <img src="img/aurora.webp" alt="a very pretty image of an auroa borealis" width="923" height="337">
+        <figure>
+          <figcaption>Fig.6 - Very pretty is it not?</figcaption>
+        </figure>
+
+        <p>Eque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Sed ut perspiciatis unde omnis iste natus error <a href="https://www.education.wa.edu.au/" target="_blank">sit voluptatem accusantium doloremque</a> laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+        <button>Button &raquo;</button>
+
+      </section>
+      <!--End of Section does not contain an HR element-->
+
+      <footer>
+        <p> &copy; Organisation Name | 20/06/2023 | v1.2.3</p>
+      </footer>
+    	
+    </main>
+
+    <div class="waves">
+      <div class='air air1'></div>
+      <div class='air air2'></div>
+      <div class='air air3'></div>
+      <div class='air air4'></div>
+    </div>
+
+	  <script src="index.js"></script>
+
+    <script type="text/javascript">
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 300; // height at which the element should be revealed to the user.
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    </script>
+
+  </body>
+</html>

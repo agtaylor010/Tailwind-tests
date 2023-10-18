@@ -1,0 +1,619 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/*Colour and Font Variables*/
+html {
+	--color-primary: #442d59 ; /*This colour is both brand compliant and AAA Accessible Pure White*/
+	--color-primary-90p: var( --color-primary )90 ; /*90% opacity*/
+	--color-primary-80p: var( --color-primary )80 ; /*80% opacity*/
+	--color-primary-70p: var( --color-primary )70 ; /*70% opacity*/
+	--color-primary-60p: var( --color-primary )60 ; /*60% opacity*/
+	--color-primary-50p: var( --color-primary )50 ; /*50% opacity*/
+	--color-primary-40p: var( --color-primary )40 ; /*40% opacity*/
+	--color-primary-30p: var( --color-primary )30 ; /*30% opacity*/
+	--color-primary-20p: var( --color-primary )20 ; /*20% opacity*/
+	--color-primary-10p: var( --color-primary )10 ; /*10% opacity*/
+
+	--color-focus: #9e0f6d ; /*This colour is both brand compliant and AAA Accessible on Pure White*/
+	
+	--color-primary-invert: #ffffff ;
+
+	--font-display: MullerDOE-Medium ; /*H1*/
+	--font-display-h2: MullerDOE-Light ; /*H2*/
+	--font-display-h3: MullerDOE-Regular ; /*H3*/
+	--font-display-h4: MullerDOE-Regular ; /*H4*/
+	--font-body: Arial, Helvetica, sans-serif ; /*P*/
+
+	--h1-size: 6.25rem ;
+	--h2-size: 4rem ;
+	--h3-size: 2rem ;
+	--h4-size: 1.5rem ;
+	--body-size: 1.125rem ;
+	--caption-size: 1rem ;
+	--quote-size: 3rem ;
+}
+
+
+/*Light*/
+@font-face {
+  font-family: MullerDOE-Light;
+  src: url(font/MullerDOE-Light.woff);
+}
+
+/*Regular*/
+@font-face {
+  font-family: MullerDOE-Regular;
+  src: url(font/MullerDOE-Regular.woff);
+}
+
+/*Medium*/
+@font-face {
+  font-family: MullerDOE-Medium;
+  src: url(font/MullerDOE-Medium.woff);
+}
+
+/*Bold*/
+@font-face {
+  font-family: MullerDOE-Bold;
+  src: url(font/MullerDOE-Bold.woff);
+}
+
+/*Quote*/
+@font-face {
+  font-family: MullerDOE-LightItalic;
+  src: url(font/MullerDOE-LightItalic.woff);
+}
+
+body {
+/*background-color: #f6f6f6;*/
+line-height: 1;
+}
+
+main {
+	background-color: #ffffff;
+	padding: 4.5rem;
+}
+
+header {
+	margin-top: 5rem;
+	margin-bottom: 21rem;
+}
+
+header h1 {
+	margin-left: 0rem; /*This just forces the H1 text to align with the rest of the font which is caused by the position of the 'L' character itself. Will likely affect other characters such as 'I', 'P', 'K', 'H', 'F', 'D', 'N' and'M' etc*/
+}
+
+section img {
+	width: 100%;
+  height: auto;
+}
+
+section p, section ul, section ol, iframe > figcaption, button {
+	margin-bottom: 2.75rem;
+}
+
+
+h1 {
+	font-family: var( --font-display );
+	font-size: var( --h1-size ) ;
+	color: var( --color-primary ) ;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+}
+
+.lesson-description {
+	font-family: var( --font-display );
+	font-size: 1.5rem;
+	color: var( --color-primary ) ;
+}
+
+h2 {
+	font-family:var( --font-display-h2 );
+	font-size: var( --h2-size );
+	margin-bottom: 4rem;
+}
+
+h3 {
+	font-family: var( --font-display-h3 );
+	font-weight: bold;
+	font-size: var( --h3-size );
+	margin-bottom: 2.5rem;
+	margin-top: 8rem;
+}
+
+h4 {
+	font-family: var( --font-display-h4 );
+	font-weight: bold;
+	font-size: var( --h4-size ); /*18px*/
+	line-height: 1.75rem;
+	color: #595959;
+	margin-bottom: 1rem;
+}
+
+p, ol, li, span {
+  font-family: var( --font-body );
+  font-size: var( --body-size ); /*18px*/
+  line-height: 2rem;
+  color: #262626;
+}
+
+a {
+	color: var( --color-focus ); 
+	text-decoration: none;
+	border-bottom: 2pt solid var( --color-focus ) ;
+}
+
+a:hover {
+	color: var( --color-primary ) ;
+	transition: 0.5s;
+	border-bottom: 2pt solid var( --color-primary ) ;
+}
+
+a::after {
+  content: " (" attr(href) ")";
+}
+
+iframe::after {
+  content: " (" attr(href) ")";
+}
+
+figcaption {
+	font-family: var( --font-body );
+  font-size: var( --caption-size ); /*16px*/
+  line-height: 1.5rem;
+  color: #262626;
+  margin-top: .6rem;
+  margin-bottom: 2.75rem;
+}
+
+hr {
+	height: 1px;
+	border: none;
+  background-color: var( --color-primary ) ;
+  opacity: 1;
+  margin-top: 5rem;
+  margin-bottom: 21rem;
+}
+
+.head-divider {
+	height: 3px;
+	opacity: 1;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+ul li ul {
+	margin-top: 1rem;
+}
+
+ul, ol {
+	margin-left: 3rem;
+}
+
+li {
+	margin-bottom: 1rem;
+}
+
+ul li::marker {
+  font-size: var( --h4-size );
+}
+
+.list-lead {
+	margin-bottom: 1.125rem;
+}
+
+ul {
+	list-style: disc;
+	color: var( --color-primary ) ;
+}
+
+.sub-bullets {
+	list-style: circle;
+	margin-left: 4em;
+}
+
+
+
+
+
+/*MS Icons*/
+.material-symbols-outlined {
+	color: var( --color-primary );
+	font-size: calc( 5rem + 0.390625vw ) !important;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0
+/*  'opsz' 72*/
+}
+
+
+
+
+/*Tables*/
+table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 0px;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var( --body-size ); /*18px*/
+}
+
+table td, table th {
+  border-collapse: collapse;
+  border-width: 0px;
+  padding: .7rem;
+}
+
+table thead {
+  color: var( --color-primary );
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table tr {
+	border-bottom: 1pt solid var( --color-primary );
+}
+
+.subheader {
+	background-color: var( --color-primary-30p ) ;
+	font-weight: bold;
+}
+
+
+
+
+/*Button*/
+button {
+  background-color: #ffffff;
+  border: 3pt solid var( --color-focus );
+  color: var( --color-focus ) ;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  transition: 0.2s;
+  width: 100%;
+  cursor: pointer;
+  font-size: var( --h4-size );
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var( --color-focus ) ;
+  color: #ffffff;
+}
+
+
+
+
+/*Footer*/
+footer {
+	margin-top: 7rem;
+}
+
+footer p {
+	text-align: center;
+	font-size: smaller;
+	opacity: 0.8;
+	padding: 1rem;
+}
+
+
+
+
+
+/*Light and Dark Block Quotes*/
+/*Due to print restrictions, all "'"DARK QUOTES" would auto default to "LIGHT"*/
+.darkquote {
+	margin: 2.5rem 0;
+	padding: 3rem;
+	text-align: center;
+}
+
+.darkquote p {
+	font-family: MullerDOE-LightItalic;
+	line-height: 4rem;
+	font-size: var( --quote-size );
+	color: #595959;
+}
+
+.darkquotecaption {
+	color: #595959;
+	font-style: italic;
+	font-size: var( --body-size );
+}
+
+.lightquote {
+	margin: 2.5rem 0;
+	padding: 3rem;
+	text-align: center;
+}
+
+.lightquote p {
+	font-family: MullerDOE-LightItalic;
+	line-height: 4rem;
+	font-size: var( --quote-size );
+	color: #595959;
+}
+
+.lightquotecaption {
+	color: #595959;
+	font-style: italic;
+	font-size: var( --body-size );
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  display: none;
+}
+
+.thumbnail, .video-url {
+	display: block;
+}
+
+
+
+
+/*Corner Block Quotes*/
+
+.block-corner-quote {
+  background-size: 0;
+}
+
+.block-corner-quote blockquote {
+	padding: 0 ;
+}
+
+.block-corner-quote figcaption {
+	padding: 0 ;
+}
+
+
+
+
+/*Cells & Columns*/
+.cell {
+  background-color: #f5f5f5;
+  height: auto;
+}
+
+.cell h3, .cell p {
+	padding: 0 1rem;
+}
+
+.cell img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+.cell-button {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.cell button {
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+.cell h3 {
+	margin-top: 1rem;
+}
+
+.column3 {
+  max-width: 100%;
+  margin: 0 auto 2.75rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.icon-bullet {
+  display:inline-grid;
+  grid-template-columns: 1fr 8fr;
+}
+
+.icon-bullet span {
+	font-size: calc(48px + 0.390625vw) !important;
+}
+
+.ms-icon {
+/*	background-color: yellow;*/
+	padding: calc(1rem + 0.390625vw);
+	max-width: 3rem;
+}
+
+
+/*Assessment & Quiz Page*/
+
+.quiz-header {
+	background-color: 0 ;
+	margin-top: 0;
+	padding: 0;
+}
+
+.quiz-header h1 {
+	font-family: var( --font-display );
+	font-size: var( --h1-size ) ;
+	color: var( --color-primary ) ;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+}
+
+.quiz-header .material-symbols-outlined {
+	color: var( --color-primary );
+	font-size: calc( 5rem + 0.390625vw ) !important;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0
+/*  'opsz' 72*/
+}
+
+.quiz {
+	border-top: 0;
+}
+
+.quiz section {
+	margin-bottom: 21rem;
+}
+
+.quiz button {
+	margin-top: 4rem;
+}
+
+
+.quiz h2 {
+	font-family:var( --font-display-h2 );
+	font-size: var( --h2-size );
+	margin-bottom: 2rem;
+}
+
+.quiz h3 {
+	font-family: var( --font-display-h3 );
+	font-weight: bold;
+	font-size: var( --h3-size );
+	margin-bottom: 1.25rem;
+	margin-top: 4rem;
+}
+
+.quiz h4 {
+	font-family: var( --font-display-h4 );
+	font-weight: bold;
+	font-size: var( --h4-size ); /*18px*/
+	line-height: 1.75rem;
+	color: #595959;
+	margin-bottom: 1rem;
+}
+
+.quiz label {
+  font-family: var( --font-body );
+  font-size: var( --body-size ); /*18px*/
+  line-height: 2rem;
+  color: #262626;
+}
+
+.quiz p {
+	margin-bottom: 1rem;
+}
+
+
+
+
+
+.assess-header {
+	background-color: 0 ;
+	margin-top: 0;
+	padding: 0;
+}
+
+.assess-header h1 {
+	font-family: var( --font-display );
+	font-size: var( --h1-size ) ;
+	color: var( --color-primary ) ;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+}
+
+.lesson-description {
+	font-family: var( --font-display );
+	font-size: 1.5rem;
+	color: var( --color-primary ) ;
+}
+
+.assess-header .material-symbols-outlined {
+	color: var( --color-primary );
+	font-size: calc( 5rem + 0.390625vw ) !important;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0
+/*  'opsz' 72*/
+}
+
+.assessment {
+	border-top: 0;
+}
+
+.assessment section {
+	margin-bottom: 21rem;
+}
+
+.assessment button {
+	margin-top: 4rem;
+}
+
+
+.assessment h2 {
+	font-family:var( --font-display-h2 );
+	font-size: var( --h2-size );
+	margin-bottom: 2rem;
+}
+
+.assessment h3 {
+	font-family: var( --font-display-h3 );
+	font-weight: bold;
+	font-size: var( --h3-size );
+	margin-bottom: 1.25rem;
+	margin-top: 4rem;
+}
+
+.assessment h4 {
+	font-family: var( --font-display-h4 );
+	font-weight: bold;
+	font-size: var( --h4-size ); /*18px*/
+	line-height: 1.75rem;
+	color: #595959;
+	margin-bottom: 1rem;
+}
+
+.assessment label {
+  font-family: var( --font-body );
+  font-size: var( --body-size ); /*18px*/
+  line-height: 2rem;
+  color: #262626;
+}
+
+.assessment p {
+	margin-bottom: 1rem;
+}
+
+.pagebreak { page-break-before: always;}
+

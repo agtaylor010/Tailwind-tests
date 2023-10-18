@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arise: References</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" id="theme">
+    <link rel="stylesheet" href="responsive.css">
+    <!--<link rel="stylesheet" href="content-animation.css">--> <!--Turn on/off content animation here-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+
+  <!--REMOVE when implementing - this just allows to toggle between the 2 themes-->
+  <style type="text/css">
+    
+    submit {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    .toggleBtns {
+      background-color: dark-grey;
+      position: fixed;
+    }
+
+  </style>
+
+  <body>
+
+      <!--This just enables you to switch between light and dark themes-->
+      <div class="toggleBtns">
+        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+      </div>
+      <script>
+        // change stylesheet using JavaScript
+        function changeSheet(sheet) {
+           var style = document.getElementById('theme');
+           style.setAttribute('href', sheet);
+        }
+      </script>
+      <!--Toggle End-->
+
+      <main>
+
+      <header>
+          <span class="material-symbols-outlined">list_alt</span>
+	        <h1 class="fade-in">List of References</h1>
+	        <!-- <p class="lesson-description">Jearn about legibility in the context of online learning.</p> -->
+          <hr class="head-divider">
+    	</header>
+
+      <!--SECTION 2-->
+      <section>
+      	<h2 class="pagebreak">Accessibility in online learning.</h2>
+
+      	<h3>[Format Style (e.g. Chicago 17th B)]</h3>
+
+        <!-- <h4>Small Heading</h4> -->
+
+      	<ul>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Gameau, Damon, and Nick Batzias. 2014. That Sugar Film. DVD. Directed by Damon Gameau. Australia: Madmen Entertainment.</li> 
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Copyright Act 1968 (Cth) S. 40. https://www.austlii.edu.au/au/legis/cth/consol_act/ca1968133/.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> “A Profession in Charge of its Future - A Vision for 2030.” 2015. Veterinary Record 177 (20): 503-504. https://doi.org/10.1136/vr.h6215.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Burns, Timothy. 2015. “Philosophy and Poetry: A New Look at an Old Quarrel.” The American Political Science Review 109 (2): 326-338. https://doi.org/10.1017/S0003055415000076.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Crawford, Lizabeth A., and Katherine B. Novak. 2018. Individual and Society: Sociological Social Psychology. 2nd ed.
+Florence: Routledge. https://ebookcentral.proquest.com/lib/curtin/detail.action?docID=5323290.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Government of Western Australia. n.d. Perth Zoo. Accessed March 12, 2018. https://perthzoo.wa.gov.au.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Huberman, Ben. 2016. “Live from Paris: David Lebovitz on Food, France, and Writing.” Discover (blog), March 3, 2016. https://discover.wordpress.com/2016/03/03/david-lebovitz-food-france-writing/.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Aboriginal Child, Family and Community Care State Secretariat. 2017. Our Families, Our Way: Strengthening Aboriginal Families So Their Children Can Thrive. MarrickVille, N.S.W.: AbSec. https://www.absec.org.au/images/downloads/AbSec-Feb2017-Our-families-our-way-program-framework-final.pdf.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Qantas. 2015. A Strong, Sustainable Future: Qantas Annual Report 2015. Sydney: Qantas. https://www.qantas.com.au/infodetail/about/investors/2015AnnualReport.pdf.</li>
+          <li><span style="font-weight:bold;">Page X | Fig. Y:</span> Kain, Erik. 2016. “Hold the Door,” Review of Game of Thrones, season 6/episode 5, by Jack Bender. Forbes, May 22, 2016. https://www.forbes.com/sites/erikkain/2016/05/22/game-of-thrones-season-6-episode-5-review-hold-the-door/#23b2a8a01b77.</li>
+        </ul>
+
+
+      <!--End of Section does not contain an HR element-->
+
+      <footer>
+        <p> &copy; Organisation Name | 20/06/2023 | v1.2.3</p>
+      </footer>
+    	
+    </main>
+
+    <div class="waves">
+      <div class='air air1'></div>
+      <div class='air air2'></div>
+      <div class='air air3'></div>
+      <div class='air air4'></div>
+    </div>
+
+	  <script src="index.js"></script>
+
+    <script type="text/javascript">
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 300; // height at which the element should be revealed to the user.
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    </script>
+
+  </body>
+</html>
