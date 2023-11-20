@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/input.css -o src/output.css -m",
-    "watch-css": "tailwindcss build src/input.css -o src/output.css --watch"
+    "build-css": "tailwindcss build src/input.css -i src/output.css -m",
+    "watch-css": "tailwindcss build src/input.css -i src/output.css --watch"
   },
   "keywords": [],
   "author": "",
