@@ -1,136 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Satellite Clock Explorer</title>
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" type="text/css" href="../output.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>  
   </head>
-  <body class="mt-12 w-[1280px] mx-auto my-12">
+  <body class="my-12 bg-[url('img/spice-pattern.gif')] bg-repeat-x">
+    <main class="md:w-[1280px] mx-auto">
+        <h1 class="text-5xl font-bold mb-12 bg-[url('img/spice-logo-sml.png')] bg-no-repeat bg-right">Satellite Clock Explorer</h1>
 
-    <h1 class="text-5xl font-bold mb-12">Satellite Clock Explorer</h1>
+        <hr class="my-24">
 
-    <div class="text-2xl mb-24">
+        <h2 class="text-3xl font-bold mb-12">Earth Satellites</h2>
         
+        <img src="img/satellite-clocks/satellite-orbits.jpg" alt="image conveying the orbiting distance of the International Space Station (ISS), GPS satellites, geostationary satellites and The Moon" class="mb-6">
 
-        
-    </div>
+        <div class="flex flex-row mb-8 text-xl">
+          <div class="basis-1/2 px-2">
+            <p class="mb-6">The Earth has one natural satellite (the Moon) and a large number of man-made satellites. Satellites orbit at different distances from the Earth.</p>
 
-    <hr class="my-24">
-
-    <h2 class="text-3xl font-bold mb-12">Earth Satellites</h2>
-    
-    <img src="img/satellite-clocks/satellite-orbits.jpg" alt="image conveying the orbiting distance of the International Space Station (ISS), GPS satellites, geostationary satellites and The Moon" class="mb-6">
-
-    <div class="flex flex-row mb-8 text-xl">
-      <div class="basis-1/2 px-2">
-        <p class="mb-6">The Earth has one natural satellite (the Moon) and a large number of man-made satellites. Satellites orbit at different distances from the Earth.</p>
-
-        <p class="mb-6">Global positioning systems (GPS) use 31 NAVSTAR GPS satellites.</p>
-        <p class="mb-6">The International Space Station (ISS) orbits close to Earth, at an altitude of about 350 km.</p>
-      </div>
-      <div class="basis-1/2 px-2">
-        
-        <p class="mb-6">GPS satellites orbit at an average altitude of about 20, 000 km.</p> 
-        <p class="mb-6">Geostationary satellites (which include many communications satellites) orbit at an average altitude of 35, 786 km above mean sea level.</p>
-        <p>The Moon is 384, 400 km from the Earth.</p>
-      </div>
-    </div>
-
-    <hr class="my-24">
-
-    <h2 class="text-3xl font-bold mb-12">Accurate Clocks</h2>
-
-    <div class="relative mb-8 text-white text-center bg-[url('img/satellite-clocks/gps-satellite-broadcasts.jpg')] bg-no-repeat bg-center bg-cover h-[800px]">
-        <p class="mb-6 bottom-0 absolute text-3xl px-8">GPS satellites broadcast their location and an accurate time signal. GPS receivers calculate their position by comparing signals from multiple satellites.</p>
-    </div>
-
-    <hr class="my-24">
-
-    <div class="flex flex-row mb-8">
-      <div class="basis-1/2 px-4">
-        <img src="img/satellite-clocks/albert-einstein.jpg" alt="GPS satellites broatcastsing their location and time signal to a user" class="mb-6" width="800" height="800">
-      </div>
-      <div class="basis-1/2 px-4">
-        <p class="mb-12 text-3xl">For accurate positioning, time signals sent by satellites must be extremely precise. Einstein's theories of relativity predict that time can be slowed down in some situations. But are these effects big enough to affect GPS?</p>
-        <h3 class="text-2xl mb-3 font-bold">The Effect of Speed</h3>
-        <p class="mb-12">Einstein's special theory of relativity predicts that a clock moving past an observer will appear to run slow. The effect is tiny, but gets bigger as the speed increases. Satellites are moving fast relative to us. To us, satellite clocks should appear to run slow.</p>
-        <h3 class="text-2xl mb-3 font-bold">The Effect of Gravity</h3>
-        <p class="mb-6">Einstein's general theory of relativity predicts that a clock in a gravitational field will appear to run slow. The effect is tiny, but gets bigger as the strength of the field increases. Satellites are in a weaker gravitational field than us. To us, satellite clocks should appear to run fast.</p>
-      </div>
-    </div>
-
-    <!-- <div class="p-4">
-      
-      <div>
-        <label for="customRange1" class="mb-2 inline-block text-neutral-700 dark:text-neutral-200">Example range</label>
-        <input type="range" class="transparent h-[4px] w-full cursor-pointer appearance-none border-transparent bg-neutral-200 dark:bg-neutral-600" id="customRange1">
-      </div>
-  
-    </div> -->
-
-    <hr class="my-24">
-
-    <h2 class="text-3xl font-bold mb-12">Satellite clock explorer</h2>
-
-    <!--Table-->
-    <div class="text-lg">
-        <div class="relative overflow-hidden shadow-md rounded-lg mb-4">
-            <table class="table-fixed w-full text-left">
-                <thead class="text-gray-200 uppercase bg-black">
-                    <tr>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">Satellite</td>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">Altitude</td>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">Orbital Radius</td>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">Orbital Speed</td>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">Time LOST<sup>1</sup></td>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">Time GAINED<sup>2</sup></td>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">TT -/+ (per sec)<sup>3</sup></td>
-                        <td class="py-1 border text-center font-bold " contenteditable="true">TT -/+ (per day)<sup>4</sup></td>
-                    </tr>
-                </thead>
-                <tbody class="bg-white text-gray-500">
-                    <tr class="p-4">
-                        <td class="p-4 border text-center" contenteditable="true">ISS</td>
-                        <td class="p-4 border text-center" contenteditable="true">350Km</td>
-                        <td class="p-4 border text-center" contenteditable="true">6,720Km</td>
-                        <td class="p-4 border text-center" contenteditable="true">7.7Km s-1</td>
-                        <td class="p-4 border text-center" contenteditable="true">330ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">36ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">-294ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">-25μs</td>           
-                    </tr>
-                    <tr class="p-4">
-                        <td class="p-4 border text-center" contenteditable="true">GPS</td>
-                        <td class="p-4 border text-center" contenteditable="true">20,230Km</td>
-                        <td class="p-4 border text-center" contenteditable="true">26,600Km</td>
-                        <td class="p-4 border text-center" contenteditable="true">3.9Km s-1</td>
-                        <td class="p-4 border text-center" contenteditable="true">83ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">529ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">+446ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">+39μs</td>           
-                    </tr>
-                    <tr class="p-4">
-                        <td class="p-4 border text-center" contenteditable="true">Geostationary</td>
-                        <td class="p-4 border text-center" contenteditable="true">35,794Km</td>
-                        <td class="p-4 border text-center" contenteditable="true">42,164Km</td>
-                        <td class="p-4 border text-center" contenteditable="true">3.1Km s-1</td>
-                        <td class="p-4 border text-center" contenteditable="true">53ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">591ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">+538ps</td>
-                        <td class="p-4 border text-center" contenteditable="true">+46μs</td>           
-                    </tr>
-                </tbody>
-            </table>
+            <p class="mb-6">Global positioning systems (GPS) use 31 NAVSTAR GPS satellites.</p>
+            <p class="mb-6">The International Space Station (ISS) orbits close to Earth, at an altitude of about 350 km.</p>
+          </div>
+          <div class="basis-1/2 px-2">
+            
+            <p class="mb-6">GPS satellites orbit at an average altitude of about 20, 000 km.</p> 
+            <p class="mb-6">Geostationary satellites (which include many communications satellites) orbit at an average altitude of 35, 786 km above mean sea level.</p>
+            <p>The Moon is 384, 400 km from the Earth.</p>
+          </div>
         </div>
-        <p class="text-base">1. per second due to relative motion</p>
-        <p class="text-base">2. per second due to weaker gravity</p>
-        <p class="text-base">3. Total time lost (-) or gained (+) per seconds</p>
-        <p class="text-base">4. Total time lost (-) or gained (+) per seconds</p>
-    </div>
 
-    <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js?v=1.0.0"></script>
+        <hr class="my-24">
 
+        <h2 class="text-3xl font-bold mb-12">Accurate Clocks</h2>
+
+        <div class="relative mb-8 text-white text-center bg-[url('img/satellite-clocks/gps-satellite-broadcasts.jpg')] bg-no-repeat bg-center bg-cover h-[800px]">
+            <p class="mb-6 bottom-0 absolute text-3xl px-8">GPS satellites broadcast their location and an accurate time signal. GPS receivers calculate their position by comparing signals from multiple satellites.</p>
+        </div>
+
+        <hr class="my-24">
+
+        <div class="flex flex-row mb-8">
+          <div class="basis-1/2 px-4">
+            <img src="img/satellite-clocks/albert-einstein.jpg" alt="GPS satellites broatcastsing their location and time signal to a user" class="mb-6" width="800" height="800">
+          </div>
+          <div class="basis-1/2 px-4">
+            <p class="mb-12 text-3xl">For accurate positioning, time signals sent by satellites must be extremely precise. Einstein's theories of relativity predict that time can be slowed down in some situations. But are these effects big enough to affect GPS?</p>
+            <h3 class="text-2xl mb-3 font-bold">The Effect of Speed</h3>
+            <p class="mb-12">Einstein's special theory of relativity predicts that a clock moving past an observer will appear to run slow. The effect is tiny, but gets bigger as the speed increases. Satellites are moving fast relative to us. To us, satellite clocks should appear to run slow.</p>
+            <h3 class="text-2xl mb-3 font-bold">The Effect of Gravity</h3>
+            <p class="mb-6">Einstein's general theory of relativity predicts that a clock in a gravitational field will appear to run slow. The effect is tiny, but gets bigger as the strength of the field increases. Satellites are in a weaker gravitational field than us. To us, satellite clocks should appear to run fast.</p>
+          </div>
+        </div>
+
+        <!-- <div class="p-4">
+          
+          <div>
+            <label for="customRange1" class="mb-2 inline-block text-neutral-700 dark:text-neutral-200">Example range</label>
+            <input type="range" class="transparent h-[4px] w-full cursor-pointer appearance-none border-transparent bg-neutral-200 dark:bg-neutral-600" id="customRange1">
+          </div>
+      
+        </div> -->
+
+        <hr class="my-24">
+
+        <h2 class="text-3xl font-bold mb-12">Satellite clock explorer</h2>
+
+        <!--Table-->
+        <div class="text-lg">
+            <div class="relative overflow-hidden shadow-md rounded-lg mb-4">
+                <table class="table-fixed w-full text-left">
+                    <thead class="text-gray-200 uppercase bg-black">
+                        <tr>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">Satellite</td>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">Altitude</td>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">Orbital Radius</td>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">Orbital Speed</td>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">Time LOST<sup>1</sup></td>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">Time GAINED<sup>2</sup></td>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">TT -/+ (per sec)<sup>3</sup></td>
+                            <td class="py-1 border text-center font-bold " contenteditable="true">TT -/+ (per day)<sup>4</sup></td>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white text-gray-500">
+                        <tr class="p-4">
+                            <td class="p-4 border text-center" contenteditable="true">ISS</td>
+                            <td class="p-4 border text-center" contenteditable="true">350Km</td>
+                            <td class="p-4 border text-center" contenteditable="true">6,720Km</td>
+                            <td class="p-4 border text-center" contenteditable="true">7.7Km s-1</td>
+                            <td class="p-4 border text-center" contenteditable="true">330ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">36ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">-294ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">-25μs</td>           
+                        </tr>
+                        <tr class="p-4">
+                            <td class="p-4 border text-center" contenteditable="true">GPS</td>
+                            <td class="p-4 border text-center" contenteditable="true">20,230Km</td>
+                            <td class="p-4 border text-center" contenteditable="true">26,600Km</td>
+                            <td class="p-4 border text-center" contenteditable="true">3.9Km s-1</td>
+                            <td class="p-4 border text-center" contenteditable="true">83ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">529ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">+446ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">+39μs</td>           
+                        </tr>
+                        <tr class="p-4">
+                            <td class="p-4 border text-center" contenteditable="true">Geostationary</td>
+                            <td class="p-4 border text-center" contenteditable="true">35,794Km</td>
+                            <td class="p-4 border text-center" contenteditable="true">42,164Km</td>
+                            <td class="p-4 border text-center" contenteditable="true">3.1Km s-1</td>
+                            <td class="p-4 border text-center" contenteditable="true">53ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">591ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">+538ps</td>
+                            <td class="p-4 border text-center" contenteditable="true">+46μs</td>           
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-base">1. per second due to relative motion</p>
+            <p class="text-base">2. per second due to weaker gravity</p>
+            <p class="text-base">3. Total time lost (-) or gained (+) per seconds</p>
+            <p class="text-base">4. Total time lost (-) or gained (+) per seconds</p>
+        </div>
+
+        <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js?v=1.0.0"></script>
+    </main>    
   </body>
 </html>
