@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Spectrum explorer</title>
+      <link rel="stylesheet" type="text/css" href="../output.css">
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script type="text/javascript" src="../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  </head>
+  <body class="my-12 bg-[url('img/spice-pattern.gif')] bg-repeat-x">
+    <main class="md:w-[1280px] mx-auto">
+        <h1 class="text-5xl font-bold mb-12 bg-[url('img/spice-logo-sml.png')] bg-no-repeat bg-right">Spectrum explorer</h1>
+        <h2 class="text-3xl mt-12 mb-6">Introduction</h2>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/spectrum-explorer/rainbow.jpg" alt="rainbow" class="w-[500px] h-[500px]">
+            <caption>'The road to Briksdalsbreen Glacier' by Luu,<br>public domain, commons.wikimedia.org/wiki/</caption>  
+          </div>
+          <div class="basis-1/2">
+            <p class="text-5xl mb-8 text-[#767676]">When white light is split into its component colours, we see part of the electromagnetic spectrum. But it contains more than just visible light.</p>
+          </div>
+        </div>
+
+        <hr class="my-24">  
+
+        <h2 class="text-3xl mt-12 mb-6">Spectrum range</h2>
+
+        <img src="img/spectrum-explorer/visible-spectrum.jpg" alt="visible spectrum">
+        <p class="text-lg mb-4">The visible spectrum covers a range in wavelength from 780nm (red) to 380nm (violet). Infrared radiation is found at longer wavelengths, and ultraviolet radiation at shorter wavelengths.</p>
+        <p class="text-lg mb-4">In fact, there are no limits to the electromagentic spectrum.</p>
+        <p class="text-lg mb-4">Radio waves longer than 1000Km are sometimes detected, and gamma rays with wavelengths shorter than 10fm are possible. However, this range includes all of the spectrum in common use.</p>
+        <p class="text-lg mb-8 font-bold">How wide is the electromagentic spectrum?</p>
+        
+
+        <hr class="my-24">  
+
+        <h2 class="text-3xl mt-12 mb-6">Astronomy</h2>
+        <p class="text-lg mb-4">Visible light creates patterns you see in the night sky with the naked eye or telescope. But astronomical objects emi much more than just visible light.</p>
+        <p class="text-lg mb-4">Astronomers use a wide range of tools to investigate the Universe in all parts of the electromagnetic spectrum. The next screen contains images od the M51 galaxy, and other astronomical objects, produced using different parts of the spectrum.</p>
+        
+        <!--Tabs navigation-->
+        <ul
+          class="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0 text-lg"
+          role="tablist"
+          data-te-nav-ref>
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#tabs-radio"
+              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
+              data-te-toggle="pill"
+              data-te-target="#tabs-radio"
+              data-te-nav-active
+              role="tab"
+              aria-controls="tabs-radio"
+              aria-selected="true"
+              >Radio</a
+            >
+          </li>
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#tabs-microwave"
+              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
+              data-te-toggle="pill"
+              data-te-target="#tabs-microwave"
+              role="tab"
+              aria-controls="tabs-microwave"
+              aria-selected="false"
+              >Microwave</a
+            >
+          </li>
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#tabs-infrared"
+              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
+              data-te-toggle="pill"
+              data-te-target="#tabs-infrared"
+              role="tab"
+              aria-controls="tabs-infrared"
+              aria-selected="false"
+              >Infrared</a
+            >
+          </li>
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#tabs-visible"
+              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
+              data-te-toggle="pill"
+              data-te-target="#tabs-visible"
+              role="tab"
+              aria-controls="tabs-visible"
+              aria-selected="false"
+              >Visible</a
+            >
+          </li>
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#tabs-ultraviolet"
+              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
+              data-te-toggle="pill"
+              data-te-target="#tabs-ultraviolet"
+              role="tab"
+              aria-controls="tabs-ultraviolet"
+              aria-selected="false"
+              >Ultraviolet</a
+            >
+          </li>
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#tabs-xray"
+              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
+              data-te-toggle="pill"
+              data-te-target="#tabs-xray"
+              role="tab"
+              aria-controls="tabs-xray"
+              aria-selected="false"
+              >X-ray</a
+            >
+          </li>
+          <li role="presentation" class="flex-auto text-center">
+            <a
+              href="#tabs-gamma-ray"
+              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
+              data-te-toggle="pill"
+              data-te-target="#tabs-gamma-ray"
+              role="tab"
+              aria-controls="tabs-gamma-ray"
+              aria-selected="false"
+              >Gamma ray</a
+            >
+          </li>
+        </ul>
+
+        <!--Tabs content-->
+        <div class="mb-6">
+          <div
+            class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-radio"
+            role="tabpanel"
+            aria-labelledby="tabs-radio-tab"
+            data-te-tab-active>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/m51-radio.jpg" alt="m51">
+                <caption >credit: NRAO/AUI</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8 mt-4">Radio emissions from M51 come from hot hydrogen gas and from fast-moving electrons. Images such as the one shown here are used by astronomers to explore distribution of magnetic fields in a galaxy.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/sun-radio.jpg" alt="sun">
+                <caption>credit: NRAO/AUI</caption>
+              </div>
+              <div class="basis-1/2">
+                 <p class="text-lg mb-8">This image of radio emissions from the Sun shows bright features (solar active regions) in two bands above and below the solar equator. Each active region corresponds to locations above sunspots where high density, hot material is confined by strong mganetic fields.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/crab-nebula-radio.jpg" alt="crab nebula">
+                <caption>credit: NRAO/AUI</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">The Crab nebula is a remnant of a supernova explosion observed in 1504 AD by Chinese and Japanese astronomers. This radio image shows the expanding shockwave with a pulsar at the centre of the remnant.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/astronomy/night-sky-radio.jpg" alt="night sky">
+                <caption>credit: NRAO/AUI</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">This image shows how the nigh sky might appear if we had 'radio eyes'. Most of the bright pinpoint sources are quasars, far more distant than stars we see with visible light. The irregular ring-like shapes are supernova remnants.</p>
+              </div>
+            </div> 
+          </div>
+
+          <div
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-microwave"
+            role="tabpanel"
+            aria-labelledby="tabs-microwave-tab">
+            
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/m51-microwave.jpg" alt="m51 microwave">
+                <caption >credit: NRAO/AUI and Juan M. Uson, NRAO</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8 mt-4">The image of the M51 galaxy uses bluish tones to show microwave emissions from hydrogen. A visible light image of the galaxy has been superimposed. The microwave image shows structures that extend far beyond the galaxy's visible arms.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/sun-microwave.jpg" alt="sun microwave">
+                <caption>credit: ESA and the HFI Consortim, IRAS</caption>
+              </div>
+              <div class="basis-1/2">
+                 <p class="text-lg mb-8">This image uses a combination of microwave and infrared to show the temperature of dust structures up to 500 light-years from the Sun. Red corresponds to temperatures of 10 degrees above absolute zero; white areas are a few tens of degrees hotter.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/galaxies-microwave.jpg" alt="galaxies microwave">
+                <caption>credit: ESA Planck Collaboration (microwave) and STScl Digitised Sky Survey (optical)</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">Microwaves (shown in orange) reveal a bridge of hot gas, 10 million light-years in length, that connects two galaxies. The galaxies were imaged in optical light using ground telescopes. The microwave image was captured by the Planck satellite.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/astronomy/universe-microwave.jpg" alt="universe microwave">
+                <caption>credit: ESA and the Planck Collaboration</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">This detailed image shows the oldest light in the Universe. Microwave radiation is left over from when the Universe was only 380,000 years old. The mottled pattern reflects tiny variations in temperature.</p>
+              </div>
+            </div> 
+          </div>
+
+          <div
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-infrared"
+            role="tabpanel"
+            aria-labelledby="tabs-infrared-tab">
+            
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/m51-infrared.jpg" alt="m51 infrared">
+                <caption >credit: S. Beckwith (STScl) Hubble Heritage Team, (STScl/AURA), ESA, NASA</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8 mt-4">The dust-rich arms of spiral galaxy M51 are strong emitters of infrared radiation. This image from the Spitzer space telescope reveals detailed structure of the arms.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/carina-nebula-infrared.jpg" alt="carina nebula infrared">
+                <caption>credit: NASA, ESA, and M. Livio and the Hubble 20th Anniversary Team (STScl)</caption>
+              </div>
+              <div class="basis-1/2">
+                 <p class="text-lg mb-8">When viewed in infrared light, background stars shine through semi-transparent gas and dust in the Carina Nebula.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/milky-way-infrared.jpg" alt="milky way infrared">
+                <caption>credit: NASA/JPL-Caltech/University of Wisconsin</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">Observations in infrared capture detailed images of the outer edhes of the Milky Way. The large 'bubble' that makes up the centre of the image, and the smaller bubbles on its edge, show where massive stars have blasted away surrounding dust.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/astronomy/orion-infrared.jpg" alt="orion infrared">
+                <caption>credit: NASA, ESA, and the Hubble Heritage Team (STScl/AURA)</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">The Horsehead nabula is a star-forming region in the constellation Orion. Detailed internal structure is reveal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-visible"
+            role="tabpanel"
+            aria-labelledby="tabs-visible-tab">
+            
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/m51-visible.jpg" alt="m51 visible">
+                <caption >credit: S. Beckwith (STScl) Hubble Heritage Team, (STScl/AURA), ESA, NASA</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8 mt-4">The M51 galaxy is a pair of interacting galaxies: the dramatic spiral of M51A and its smaller irregular companion, M51B. This visible light image clearly shows M51A's spiral arms containing bright patches of star formation.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/carina-nebula-visible.jpg" alt="carina nebula visible">
+                <caption>credit: NASA, ESA, and M. Livio and the Hubble 20th Anniversary Team (STScl)</caption>
+              </div>
+              <div class="basis-1/2">
+                 <p class="text-lg mb-8">The Carina Nebula is one of the largest star-bith regions in the galaxy. Towers of cool hydrogen gas and dust obscure infant stars buried inside.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/cats-eye-nebula-visible.jpg" alt="milky way visible">
+                <caption>credit:NASA, ESA, HEIC, and The Hubble Heritage Team (STScl/AURA)</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">The Cat's Ete Nebula was on the first planetary nebula to be discovered. Planetary nebulae result from the death of a Sun-like star.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/astronomy/universe-visible.jpg" alt="universe visible">
+                <caption>credit: NASA, ESA, and the Hubble Heritage Team (STScl/AURA)</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">Repeat imaging of a small, ordinary patch of sky reveals galaxies that span back 13.2 billion years in time. The faintest galaxies are on th-billionth the brightness of that the human eye can see.</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-ultraviolet"
+            role="tabpanel"
+            aria-labelledby="tabs-ultraviolet-tab">
+            
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/m51-ultraviolet.jpg" alt="m51 ultraviolet">
+                <caption >credit: NASA/JPL-Caltech</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8 mt-4">This ultraviolet image of M51 highlights hot, young stars that produce lots of ultraviolet energy. It shows that few stars are being produced in the companion galaxy, M51B, which appears as a dull red patch.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/sun-ultraviolet.jpg" alt="sun ultraviolet">
+                <caption>credit: NASA Solar Dynamics Observatory</caption>
+              </div>
+              <div class="basis-1/2">
+                 <p class="text-lg mb-8">Massive solar flares such as the one visible near the centre of this image erupt regularly from the surface of the Sun. These can result in spectacular aurora on Earth.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/large-magellanic-cloud-ultraviolet.jpg" alt="large magellanic cloud ultraviolet">
+                <caption>credit:NASA</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">This ultraviolet image of our neighbouring galaxy, the Large Magellanic Cloud, reveals many hot, young stars. About 1 million UV sources are represented in this image.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/astronomy/venus-ultraviolet.jpg" alt="venus ultraviolet">
+                <caption>credit: ESA 2007 MPS/DLR-PF/IDA</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">This ultraviolet view of Venus shows detailed cloud structure. The south pole is on the left. Moving to the right there are streaky clouds, a bright mid-latitude band and mottled clouds near the equator.</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-xray"
+            role="tabpanel"
+            aria-labelledby="tabs-xray-tab">
+            
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/m51-xray.jpg" alt="m51 xray">
+                <caption >credit: A. Wilson (UMD) et al., CXC, NASA</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8 mt-4">X-ray emissions from M51 clearly show the high energy cores of the two galaxies, M51A and M51B. The large number of point sources are probably associated with neutron stars and black holes.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/black-hole-xray.jpg" alt="black hole xray">
+                <caption>credit: NASA/CXC/Curtin University/R.Soria et al.</caption>
+              </div>
+              <div class="basis-1/2">
+                 <p class="text-lg mb-8">This image shows a high energy X-ray outburst from a black hole. A supermassive black hole exists at the centre of the Milky Way</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/eta-carina-xray.jpg" alt="eta carina xray">
+                <caption>credit: NASA/CXC/GSFC/M. Corcoan et al. (X-ray); NASA/STScl (optical)</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">Eta Carina, a star between 100 and 150 times the mass of our Sun, has undergone a massive explosion. X-ray emissions are shown in orange. They are caused by ejected material heating surrounding gas to a million degrees.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/astronomy/milky-way-xray.jpg" alt="milky way xray">
+                <caption>credit: NASA/CXC/UCLA/MIT/M.Muno et al.</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">The centre of the Milky Way contains thousands of X-ray sources. High-energy X-rays originate from Neutron stars, black holes and white dwarfs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            id="tabs-gamma-ray"
+            role="tabpanel"
+            aria-labelledby="tabs-gamma-ray-tab">
+            
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/fermi-gamma-ray.jpg" alt="m51 gamma ray">
+                <caption >credit: NASA/DOE/Fermi LAT Collaboration</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8 mt-4">This image from the Fermi Gamma-ray Space Telescope shows most gamma rays reaching Earth originate from our own Milky Way galaxy. Other point sources show in this image originate from pulsars and active galaxies.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/moon-gamma-ray.jpg" alt="black hole gamma ray">
+                <caption>credit: D.J. Thompson, D.L. Bertsch (NASA/GSFC), D.J. Morris (UNH), R. Mukherjee (NASA/GSFC/USRA)</caption>
+              </div>
+              <div class="basis-1/2">
+                 <p class="text-lg mb-8">This is how the Moon would appear if you could see in gamma rays. Gamma rays are produced when particles from the Sun hit the Moon. The Moon is brighter than the Sun at this wavelength.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row mb-4">
+              <div class="basis-1/2">
+                <img src="img/astronomy/milky-way-gamma-ray.jpg" alt="milky way gamma ray">
+                <caption>credit: NASA's Goddard Space Flight Center</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">This illustration shows newly discovered gamma ray bubbles (in purple), that extend for 25,000 light years, either side of the Milky Way. The origin of the bubbles is unknown, but they may be remnants of an eruption from a supersized black hole at the centre of our galaxy.</p>
+              </div>
+            </div>
+
+            <!--Row-->
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/astronomy/supernova-gamma-ray.jpg" alt="supernova gamma ray">
+                <caption>credit: NASA/DOE/Fermi LAT Collaboration, NRAO/AUI, JPL-Caltech, ROSAT</caption>
+              </div>
+              <div class="basis-1/2">
+                <p class="text-lg mb-8">High-speed particles from a supernova bombard surrounding gas which emits gamma rays. This composite image combines gamma rays (magenta), radio waves (yello) and infrared (red) from supernova remnant W44.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="my-24">  
+
+        <h2 class="text-3xl mt-12 mb-6">Medicine</h2>
+        <p class="text-lg mb-4">The electromagnetic spectrum is widely used in medicine, both for diagnosis and treatment. Its use for different applications depends on properties of various parts of the spectrum.</p>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/medical/radio.jpg" alt="MRI">
+            <caption >credit: Reigh LeBlanc, CC-BY-NC, www.flickr.com/photos/reighleblanc/3854685038/</caption>
+          </div>
+          <div class="basis-1/2">
+            <h3 class="text-2xl font-bold">Radio</h3>
+            <p class="text-lg mb-8 mt-4">Magentic resonace imaging (MRI) is a technique used to image soft tissue, such as the brain. The patient is placed in a strong magnetic field and pulses of radiowaves applied. The image is constructed by detecting the way protons in hydrogen atoms behave under these conditions.</p>
+          </div>
+        </div>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/medical/heal-bone.jpg" alt="microwave of heal bone">
+            <caption >credit: Cancer Imaging and Radiobiology Research Program (CIR) at Dartmouth-Hitchcock's Norris Cotton Cancer</caption>
+          </div>
+          <div class="basis-1/2">
+            <h3 class="text-2xl font-bold">Microwaves</h3>
+            <p class="text-lg mb-8 mt-4">This semi-transparent image of the heel bone was made using microwave imaging technology. Horizontal lines in the inset diagram show mwhere microwave imaging planes were set.</p>
+          </div>
+        </div>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/medical/thermal-image.jpg" alt="thermal image of a cat">
+            <caption >credit: yellowcloud</caption>
+          </div>
+          <div class="basis-1/2">
+            <h3 class="text-2xl font-bold">Infrared</h3>
+            <p class="text-lg mb-8 mt-4">A thermal image measures infrared radiation emitted by living and non-living bodies. In this image of a cat's head, warmer area are shown in shades of red, and cooler areas in green.</p>
+          </div>
+        </div>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/medical/microscopy.jpg" alt="microscopy">
+            <caption >credit: Dr Lutz Slomianka (School of Anatomy and Human Biology, The University of Western Australia)</caption>
+          </div>
+          <div class="basis-1/2">
+            <h3 class="text-2xl font-bold">Visible</h3>
+            <p class="text-lg mb-8 mt-4">Visible light microscopy is used in medicine to study body tissues. Stains may be used to differentiate tissue types by colour. This image shows cells from a human spleen with areas of red and white pulp.</p>
+          </div>
+        </div>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/medical/beach.jpg" alt="beach">
+            <caption >credit: Ian Britton, CC-BY-NC-2.0, www.flickr.com/photos/freefoto/2695924967/</caption>
+          </div>
+          <div class="basis-1/2">
+            <h3 class="text-2xl font-bold">Ultraviolet</h3>
+            <p class="text-lg mb-8 mt-4">A sunny day and people head to the beach to get a sun tan. Ultraviolet light from the Sun causes the tan, but it's a delicate balancing act. Some exposure to UV light is necessary for Vitamin D production, but too mch UV causes skin and eye damage including skin cancer and cataracts.</p>
+          </div>
+        </div>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/medical/xray.jpg" alt="xray of the chest">
+            <caption >credit: Stillwaterising</caption>
+          </div>
+          <div class="basis-1/2">
+            <h3 class="text-2xl font-bold">X-ray</h3>
+            <p class="text-lg mb-8 mt-4">X-rays easily travel through soft tissue, but are absorbed by bone and other harder material. This chest X-ray clearly shows different density tissues.</p>
+          </div>
+        </div>
+
+        <!--Row-->
+        <div class="sm:flex sm:flex-row mb-4">
+          <div class="basis-1/2">
+            <img src="img/medical/positron.jpg" alt="positron emission tomography (PET)">
+            <caption >credit: US National Institute of Aging, Alzheimer's Disease Education and Referral Center</caption>
+          </div>
+          <div class="basis-1/2">
+            <h3 class="text-2xl font-bold">Gamma ray</h3>
+            <p class="text-lg mb-8 mt-4">Positron Emission Tomography (PET) is a way of producing 3D images of functioning organs. A patient is injected with radioacive material that emits gamma rays. These are detected as the tracer makes its way through the body. This image shows a normal humna brain.</p>
+          </div>
+        </div>
+        
+    </main>
+
+    <script>
+      // Initialization for ES Users
+      import {
+        Tab,
+        initTE,
+      } from "tw-elements";
+
+      initTE({ Tab });
+    </script>
+
+    <script type="text/javascript" src="../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  </body>
+</html>
