@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How do buffers work?</title>
+    <link rel="stylesheet" type="text/css" href="../output.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script type="text/javascript" src="../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
+    <style>
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+      </style>
+</head>
+<body class="my-12 bg-[url('img/spice-pattern.gif')] bg-repeat-x">
+    <main class="md:w-[1280px] mx-auto">
+    
+    <h1 class="text-5xl font-bold mb-12 bg-[url('img/spice-logo-sml.png')] bg-no-repeat bg-right">Buffers</h1>
+    
+    <section class=" mb-12">  
+      <h2 class="text-3xl mb-4 font-bold">1. Strong Acids</h2>
+
+      <video width="1280" height="720" controls>
+        <source src="video/K12SCI044/K12SCI044-buffers-strong-acids.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="text-lg mt-4">Strong acids, such as hydroichloric acid, exist almost completely as ions in water. For clarity, water molecules are <strong>not</strong> shown in this animation.</p>
+    </section>
+
+    <hr class="my-24">
+
+    <section class=" mb-12"> 
+      <h2 class="text-3xl mb-4 font-bold">2. Weak Acids</h2>
+
+      <video width="1280" height="720" controls>
+        <source src="video/K12SCI044/K12SCI044-buffers-weak-acids.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="text-lg mt-4">Weak acids, such as hydrofluric acid, exist as molecules and ions in water.</p>
+    </section>
+
+    <hr class="my-24">
+
+    <section class=" mb-12"> 
+      <h2 class="text-3xl mb-4 font-bold">3. Le Chatelier's principle</h2>
+
+      <div class="flex flex-row mt-8 text-xl">
+        <div class="basis-2/3 px-2">
+          <p class="text-lg mt-4">Le Chatelier's principle applies to chemical systems that are in equalibrium. It is used to predict what will happen to a reversible chemical reaction when conditions are changed. The principle states that if temperature, pressure or concentratio of reactants in a reversible chemical reaction are changed, the equilibrium will shift so as to minimise any change.</p>
+          <p class="text-lg mt-4">For example, consider this reversible reaction:</p>
+          <p class="text-2xl mt-4 font-bold">A+B&#8596;C+D</p>
+          <p class="text-lg mt-4">If the concentration of C is increased, then the equilibrium shifts to the left, minimising the increase in concentration of C.</p>
+          <p class="text-lg mt-4">If the concentration of C is decreased, then the equilibrium shifts to the right, minimising the decrease in concentration of C.</p>
+        </div>
+        <div class="basis-1/3 px-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Lechatelier.jpg" alt="Le Chatelier">
+          <!-- <caption class="text-sm">credit: <a href="https://upload.wikimedia.org/wikipedia/commons/a/a6/Lechatelier.jpg" target="_blank">Wikipedia</a></caption> -->
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-24">
+
+    <section class=" mb-12"> 
+      <h2 class="text-3xl mb-4 font-bold">4. Strong and Weak acids.</h2>
+
+      <video width="1280" height="720" controls>
+        <source src="video/K12SCI044/K12SCI044-buffers-strong-and-weak-acids.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="text-lg mt-4">What do you notice about the relative abundance of ions and molecules in solutions of hydrochloric acid (a strong acid) and hydrofluoric acid (a weak acid)?</p>
+    </section>
+
+    <hr class="my-24">
+
+    <section class=" mb-12"> 
+      <h2 class="text-3xl mb-4 font-bold">4. Strong and Weak acids</h2>
+
+        <p class="text-lg mt-4">How does a buffer work?</p>
+
+        <p class="text-lg mt-4 mb-8">Select tabs Steps 1 to Step 5 below to see what happens when a strong acid (HCl) is added to an aqueous solution of a weak acid (HF).</p>
+      
+      <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Step-1')">Step 1</button>
+          <button class="tablinks" onclick="openCity(event, 'Step-2')">Step 2</button>
+          <button class="tablinks" onclick="openCity(event, 'Step-3')">Step 3</button>
+          <button class="tablinks" onclick="openCity(event, 'Step-4')">Step 4</button>
+          <button class="tablinks" onclick="openCity(event, 'Step-5')">Step 5</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="Step-1" class="tabcontent">
+          <p class="text-lg mt-4">The weak acid (HF) is only slightly ionised, so there is a low concentration of hydrogen and fluoride ions present at equilibrium.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/buffers-step-1.png" alt="concentration of HCl and HF" class="mx-auto my-0 w-[547px] mt-12">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/step-01-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="Step-2" class="tabcontent">
+          <p class="text-lg mt-4">A small amount of hydrochloric acid is added to the hydrofluoric acid solution. Hydrochloric acid is a strong acid that almost completely ionises in water.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/buffers-step-2.png" alt="concentration of HCl and HF" class="mx-auto my-0 w-[547px] mt-8">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/step-01-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="Step-3" class="tabcontent">
+          <p class="text-lg mt-4">Adding hydrochloric acid increases the concentration of hydrogen ions in solution. The solution becomes more acidic and its pH decreases.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/buffers-step-3.png" alt="concentration of HCl and HF" class="mx-auto my-0 w-[547px] mt-8">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/step-03-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="Step-4" class="tabcontent">
+          <p class="text-lg mt-4">Le Chatelier's principle predicts that an increase in hydrogen ion concentration will drive the equilibrium reaction HF&#8596;H<sup>+</sup>+F<sup>-</sup> to the left. Some free fluoride ions will combine with hydrogen ions to form HF. The hydrogen ion concentration decreases, the solution becomes less acidic and the pH increases.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/buffers-step-4.png" alt="concentration of HCl and HF" class="mx-auto my-0 w-[547px] mt-8">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/step-03-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="Step-5" class="tabcontent">
+          <p class="text-lg mt-4">Adding HCl has increased the pH, but only by a small amount. A new equilibirum has been established, but almost all of the free fluroide ions have been used up. Chloride ions play no part in the equilibirum, hence their name 'spectator ions'.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/buffers-step-5.png" alt="concentration of HCl and HF" class="mx-auto my-0 w-[547px] mt-8">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/buffers-step-1.gif" alt="animation showing concentration of HCl and HF">
+              </div>
+            </div>
+        </div>
+
+    </section>
+
+    <hr class="my-24">
+
+    <section class=" mb-12"> 
+      <h2 class="text-3xl mb-4 font-bold">6. Effective buffers</h2>
+
+        <div class="sm:flex sm:flex-row">
+          <div class="basis-2/3">
+            <p class="text-lg mt-4">Hydrofluoric acid is not a very effective buffer because there aren't many fluoride ions available in solution that can combine with added hydrogen ions.</p>
+
+            <p class="text-lg mt-4">To make a more effective buffer, the concentration of available fluoride ions must be increased. Sodium fluoride is added to the hydrofluoric acid solution to do this.</p>
+
+            <p class="text-lg mt-4">Sodium ions are spectator ions in the bufering process, but the increased concentration of fluoride ions makes the solution a much more effective buffer.</p>
+
+            <p class="text-lg mt-4">Sodium fluoride is an <strong>ionic salt</strong> that contains the <strong>conjugate base</strong> of the <strong>weak acid</strong>, hydrofluoric acid.</p>
+          </div>
+          <div class="basis-1/3 p-4">
+            <img src="img/buffers/buffers-step-1.gif" alt="concentration bar chart">
+          </div>
+        </div>
+
+    </section>
+
+    <hr class="my-24">
+
+    <section class=" mb-12"> 
+      <h2 class="text-3xl mb-4 font-bold">7. An effective buffers</h2>
+
+      <p class="text-lg mt-4">How does a mixture of hydrofluoric acid and sodium fluoride work as a buffer?</p>
+
+      <p class="text-lg mt-4 mb-8">Select tabs Steps 1 to Step 5 below to see what happens when a strong acid (HCl) is added to a mixture of a weak acid (HF) and an ionic salt containing its conjugate base (NaF).</p>
+
+      <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'eStep-1')">Step 1</button>
+          <button class="tablinks" onclick="openCity(event, 'eStep-2')">Step 2</button>
+          <button class="tablinks" onclick="openCity(event, 'eStep-3')">Step 3</button>
+          <button class="tablinks" onclick="openCity(event, 'eStep-4')">Step 4</button>
+          <button class="tablinks" onclick="openCity(event, 'eStep-5')">Step 5</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="eStep-1" class="tabcontent">
+          <p class="text-lg mt-4">The buffer contains a high concentration of fluoride ions because sodium fluoride completely dissociates in aqueous solution. As before, only a small proportion of hydrofluoric acid ionises.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/effective-buffers-step-1.png" alt="concentration of HCl and NaF" class="mx-auto my-0 w-[547px] mt-12">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/effective-step-01-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="eStep-2" class="tabcontent">
+          <p class="text-lg mt-4">A small amount of hydrochloric acid is added to the buffer solution. Hydrochloric acid is a strong acid that almost completely ionises in water.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/effective-buffers-step-2.png" alt="animation showing concentration of HCl and NaF" class="mx-auto my-0 w-[547px] mt-12">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/effective-step-01-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="eStep-3" class="tabcontent">
+          <p class="text-lg mt-4">Adding hydrochloric acid to the buffer increases the concentration of hydrogen ions. The solution is now more acidic and the pH lower.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/effective-buffers-step-3.png" alt="concentration of HCl and NaF" class="mx-auto my-0 w-[547px] mt-8">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/effective-step-03-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="eStep-4" class="tabcontent">
+          <p class="text-lg mt-4">Using Le Chatelier's principle, an increase in hydrogen ion concentration drives the equilibrium reaction HF&#8596;H<sup>+</sup>+F<sup>-</sup> to the left. Some of the free fluoride ions combine with hydrogen ions to form HF. The hydrogen ion concentration decreases, the solution becomes less acidic and the pH increases.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/effective-buffers-step-4.png" alt="concentration of HCl and NaF" class="mx-auto my-0 w-[547px] mt-8">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/effective-step-03-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+
+        <div id="eStep-5" class="tabcontent">
+          <p class="text-lg mt-4">Adding HCl has not affected the pH. A new equilibirum has been established by combining some free fluoride ions with hydrogen ions. If more hydrochloric acid is added to the buffer, there are still plenty of fluoride ions left in solution that can combine with hydrogen ions.</p>
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/2">
+                <img src="img/buffers/effective-buffers-step-5.png" alt="concentration of HCl and NaF" class="mx-auto my-0 w-[547px] mt-8">
+              </div>
+              <div class="basis-1/2 p-4">
+                <img src="img/buffers/effective-step-05-concentration.png" alt="concentration bar chart">
+              </div>
+            </div>
+        </div>
+      
+      </section>
+
+      <hr class="my-24">
+
+      <section class=" mb-12"> 
+        <h2 class="text-3xl mb-4 font-bold">8. Summary</h2>
+
+        <div class="sm:flex sm:flex-row">
+          <div class="basis-2/3">
+            <p class="text-lg mt-4">Buffers resist changes in pH.</p>
+            <p class="text-lg mt-4">An effective buffer consists of a weak acid and a salt containing its conjugate base.</p>
+            <p class="text-lg mt-4">Le Chatelier's Principle cna be used to explain how a buffer works.</p>
+            <p class="text-lg mt-4">An increase in hydrogen ions is resisted by combining hydrogen ions with the conjugate base. This makes more molecules of the weak acid.</p>
+            <p class="text-lg mt-4">A decrease in hydrogen ions is resisted by increased dissociation of the weak acid.</p>
+          </div>
+          <div class="basis-1/3 p-4">
+            <img src="img/buffers/buffers-summary.png" alt="beach">
+            <p class="text-lg mt-4">Buffers are all around us: in our bodies and in the environment. They maintain stable pH conditions necessary for life.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="text-base text-center mt-12 border-t-[1px] border-[#767676] border-solid pt-4">Copyright &copy; The University of Western Australia 2001 (ISBN 1-74052-000-9)</footer>
+
+</main>
+
+<script>
+    function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+
+
+</html>
+
