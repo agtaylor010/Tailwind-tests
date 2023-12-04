@@ -8,7 +8,44 @@
       <link rel="icon" href="favicon.ico">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
       <script src="https://cdn.tailwindcss.com"></script>
-      <script type="text/javascript" src="../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+      <!-- <script type="text/javascript" src="../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
+      <style>
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+      </style>  
   </head>
   <body class="my-12 bg-[url('img/spice-pattern.gif')] bg-repeat-x">
     <main class="md:w-[1280px] mx-auto">
@@ -98,70 +135,17 @@
             <li>are generally soluble in water.</li>
         </ul>
 
-        <!--Tabs navigation-->
-        <ul
-          class="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0 text-lg"
-          role="tablist"
-          data-te-nav-ref>
-          <li role="presentation" class="flex-auto text-center">
-            <a
-              href="#tabs-solid"
-              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
-              data-te-toggle="pill"
-              data-te-target="#tabs-solid"
-              data-te-nav-active
-              role="tab"
-              aria-controls="tabs-solid"
-              aria-selected="true"
-              >Solid</a
-            >
-          </li>
-          <li role="presentation" class="flex-auto text-center">
-            <a
-              href="#tabs-molten"
-              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
-              data-te-toggle="pill"
-              data-te-target="#tabs-molten"
-              role="tab"
-              aria-controls="tabs-molten"
-              aria-selected="false"
-              >Molten</a
-            >
-          </li>
-          <li role="presentation" class="flex-auto text-center">
-            <a
-              href="#tabs-solution"
-              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
-              data-te-toggle="pill"
-              data-te-target="#tabs-solution"
-              role="tab"
-              aria-controls="tabs-solution"
-              aria-selected="false"
-              >Solution</a
-            >
-          </li>
-          <li role="presentation" class="flex-auto text-center">
-            <a
-              href="#tabs-deformation"
-              class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 font-medium leading-tight text-neutral-600 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-[black] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[black] dark:data-[te-nav-active]:text-[black]"
-              data-te-toggle="pill"
-              data-te-target="#tabs-deformation"
-              role="tab"
-              aria-controls="tabs-deformation"
-              aria-selected="false"
-              >Deformation</a
-            >
-          </li>
-        </ul>
+        <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Solid')">Solid</button>
+          <button class="tablinks" onclick="openCity(event, 'Molten')">Molten</button>
+          <button class="tablinks" onclick="openCity(event, 'Solution')">Solution</button>
+          <button class="tablinks" onclick="openCity(event, 'Deformation')">Deformation</button>
 
-        <!--Tabs content-->
-        <div class="mb-6">
-          <div
-            class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            id="tabs-solid"
-            role="tabpanel"
-            aria-labelledby="tabs-solid-tab"
-            data-te-tab-active>
+        </div>
+
+        <!-- Tab content -->
+        <div id="Solid" class="tabcontent">
             <div class="sm:flex sm:flex-row">
               <div class="basis-1/2">
                 <img src="img/chemical-bonds/properties-of-ionic-compounds/solid.gif" alt="solid state of sodium chloride ionic compounds">
@@ -169,13 +153,10 @@
               <div class="basis-1/2 p-4">
                 <img src="img/chemical-bonds/properties-of-ionic-compounds/solid-voltage.gif" alt="solid state of sodium chloride ionic compounds with voltage applied">
               </div>
-            </div> 
-          </div>
-          <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            id="tabs-molten"
-            role="tabpanel"
-            aria-labelledby="tabs-molten-tab">
+            </div>
+        </div>
+
+        <div id="Molten" class="tabcontent">
             <div class="sm:flex sm:flex-row">
               <div class="basis-1/2">
                 <img src="img/chemical-bonds/properties-of-ionic-compounds/molten.gif" alt="molten state of sodium chloride ionic compounds">
@@ -184,12 +165,9 @@
                 <img src="img/chemical-bonds/properties-of-ionic-compounds/molten-voltage.gif" alt="molten state of sodium chloride ionic compounds with voltage applied">
               </div>
             </div>
-          </div>
-          <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            id="tabs-solution"
-            role="tabpanel"
-            aria-labelledby="tabs-solution-tab">
+        </div>
+
+        <div id="Solution" class="tabcontent">
             <div class="sm:flex sm:flex-row">
               <div class="basis-1/2">
                 <img src="img/chemical-bonds/properties-of-ionic-compounds/solution.gif" alt="solution state of sodium chloride ionic compounds">
@@ -198,16 +176,12 @@
                 <img src="img/chemical-bonds/properties-of-ionic-compounds/solution-voltage.gif" alt="solution state of sodium chloride ionic compounds with voltage applied">
               </div>
             </div>
-          </div>
-          <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            id="tabs-deformation"
-            role="tabpanel"
-            aria-labelledby="tabs-deformation-tab">
-            <img src="img/chemical-bonds/properties-of-ionic-compounds/deformation.gif" alt="deformation of sodium chloride ionic compounds">
-          </div>
         </div>
-        
+
+        <div id="Deformation" class="tabcontent">
+            <img src="img/chemical-bonds/properties-of-ionic-compounds/deformation.gif" alt="deformation of sodium chloride ionic compounds">
+        </div>
+
         <hr class="my-24">  
 
         <h2 class="text-3xl mt-12 mb-6">Covalent Bonding</h2>
@@ -265,226 +239,51 @@
             <li>have high melting and boiling points.</li>
         </ul>
 
-        <!-- ACCORDIAN -->
-        <div id="accordionExample">
-          <div
-            class="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 class="mb-0" id="headingOne">
-              <button
-                class="group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
-                type="button"
-                data-te-collapse-init
-                data-te-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne">
-                <h3 class="font-bold text-lg">Diamond</h3>
-                <span
-                  class="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-6 w-6">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="!visible"
-              data-te-collapse-item
-              data-te-collapse-show
-              aria-labelledby="headingOne"
-              data-te-parent="#accordionExample">
-              <div class="px-5 py-4">
-                <div class="sm:flex sm:flex-row">
-                  <div class="basis-1/3"><img src="img/chemical-bonds/0-diamond.gif" alt="Diamond molecule"></div>
-                  <div class="basis-2/3 p-4"><p class="text-xl">Diamond is a form of carbon. It is the hardest naturally occurring mineral.</p></div>
-                </div>  
-              </div>
-            </div>
-          </div>
-          <div
-            class="border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 class="mb-0" id="headingTwo">
-              <button
-                class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
-                type="button"
-                data-te-collapse-init
-                data-te-collapse-collapsed
-                data-te-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo">
-                <h3 class="font-bold text-lg">Silica</h3>
-                <span
-                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-6 w-6">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="!visible hidden"
-              data-te-collapse-item
-              aria-labelledby="headingTwo"
-              data-te-parent="#accordionExample">
-              <div class="px-5 py-4">
-                <div class="px-5 py-4">
-                <div class="sm:flex sm:flex-row">
-                  <div class="basis-1/3"><img src="img/chemical-bonds/1-silica.gif" alt="Silica molecule"></div>
-                  <div class="basis-2/3 p-4"><p class="text-xl">The struture shown here is a form of quartz, which is naturally occurring silica (SiO<sub>2</sub>). Silicon atoms are shown in blue and oxygen atoms in red.</p></div>
-                </div>  
-              </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-b-lg border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 class="accordion-header mb-0" id="headingThree">
-              <button
-                class="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] [&[data-te-collapse-collapsed]]:rounded-b-[15px] [&[data-te-collapse-collapsed]]:transition-none"
-                type="button"
-                data-te-collapse-init
-                data-te-collapse-collapsed
-                data-te-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree">
-                <h3 class="font-bold text-lg">Carborundum</h3>
-                <span
-                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-6 w-6">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              class="!visible hidden"
-              data-te-collapse-item
-              aria-labelledby="headingThree"
-              data-te-parent="#accordionExample">
-              <div class="px-5 py-4">
-                <div class="sm:flex sm:flex-row">
-                  <div class="basis-1/3"><img src="img/chemical-bonds/2-carboundum.gif" alt="Carboundum molecule"></div>
-                  <div class="basis-2/3 p-4"><p class="text-xl">Carborundum is a very hard, human-made material with the formula SiC (silicon carbide). Silicon atoms are shown in blue and carbon atoms in pink.</p></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-b-lg border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 class="accordion-header mb-0" id="headingFour">
-              <button
-                class="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] [&[data-te-collapse-collapsed]]:rounded-b-[15px] [&[data-te-collapse-collapsed]]:transition-none"
-                type="button"
-                data-te-collapse-init
-                data-te-collapse-collapsed
-                data-te-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour">
-                <h3 class="font-bold text-lg">Corrundum</h3>
-                <span
-                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-6 w-6">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="!visible hidden"
-              data-te-collapse-item
-              aria-labelledby="headingFour"
-              data-te-parent="#accordionExample">
-              <div class="px-5 py-4">
-                <div class="sm:flex sm:flex-row">
-                  <div class="basis-1/3"><img src="img/chemical-bonds/3-corundum.gif" alt="Corundum molecule"></div>
-                  <div class="basis-2/3 p-4"><p class="text-xl">Corrundum is a naturally occurring aluminum oxide (Al<sub>2</sub>O<sub>3</sub>). Aluminium atoms are shown in blue and oxygen atoms in red.</p></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="rounded-b-lg border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 class="accordion-header mb-0" id="headingThree">
-              <button
-                class="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)] [&[data-te-collapse-collapsed]]:rounded-b-[15px] [&[data-te-collapse-collapsed]]:transition-none"
-                type="button"
-                data-te-collapse-init
-                data-te-collapse-collapsed
-                data-te-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive">
-                <h3 class="font-bold text-lg">Graphite</h3>
-                <span
-                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-6 w-6">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="collapseFive"
-              class="!visible hidden"
-              data-te-collapse-item
-              aria-labelledby="headingFive"
-              data-te-parent="#accordionExample">
-              <div class="px-5 py-4">
-                <div class="sm:flex sm:flex-row">
-                  <div class="basis-1/3"><img src="img/chemical-bonds/4-graphite.gif" alt="Graphite molecule"></div>
-                  <div class="basis-2/3 p-4"><p class="text-xl">Graphite is a form of carbon. Carbon atoms are arranged in sheets or layers where each carbon atom forms a covalent bond to three neighbours. The fourth valence electron is delocalised forming waek bonds between carbon atoms in adjoining layers.</p></div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Diamond')">Diamond</button>
+          <button class="tablinks" onclick="openCity(event, 'Silica')">Silica</button>
+          <button class="tablinks" onclick="openCity(event, 'Carborundum')">Carborundum</button>
+          <button class="tablinks" onclick="openCity(event, 'Corrundum')">Corrundum</button>
+          <button class="tablinks" onclick="openCity(event, 'Graphite')">Graphite</button>
         </div>
+
+        <!-- Tab content -->
+        <div id="Diamond" class="tabcontent">
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/3"><img src="img/chemical-bonds/0-diamond.gif" alt="diamond molecule"></div>
+              <div class="basis-2/3 p-4"><p class="text-xl">Diamond is a form of carbon. It is the hardest naturally occurring mineral.</p></div>
+            </div>
+        </div>
+
+        <div id="Silica" class="tabcontent">
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/3"><img src="img/chemical-bonds/1-silica.gif" alt="silica molecule"></div>
+              <div class="basis-2/3 p-4"><p class="text-xl">The struture shown here is a form of quartz, which is naturally occurring silica (SiO<sub>2</sub>). Silicon atoms are shown in blue and oxygen atoms in red.</p></div>
+            </div>
+        </div>
+
+        <div id="Carborundum" class="tabcontent">
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/3"><img src="img/chemical-bonds/2-carborundum.gif" alt="carborundum molecule"></div>
+              <div class="basis-2/3 p-4"><p class="text-xl">Carborundum is a very hard, human-made material with the formula SiC (silicon carbide). Silicon atoms are shown in blue and carbon atoms in pink.</p></div>
+            </div>
+        </div>
+
+        <div id="Corrundum" class="tabcontent">
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/3"><img src="img/chemical-bonds/3-corrundum.gif" alt="corrundum molecule"></div>
+              <div class="basis-2/3 p-4"><p class="text-xl">Corrundum is a naturally occurring aluminum oxide (Al<sub>2</sub>O<sub>3</sub>). Aluminium atoms are shown in blue and oxygen atoms in red.</p></div>
+            </div>
+        </div>
+
+        <div id="Graphite" class="tabcontent">
+            <div class="sm:flex sm:flex-row">
+              <div class="basis-1/3"><img src="img/chemical-bonds/4-graphite.gif" alt="graphite molecule"></div>
+              <div class="basis-2/3 p-4"><p class="text-xl">Graphite is a form of carbon. Carbon atoms are arranged in sheets or layers where each carbon atom forms a covalent bond to three neighbours. The fourth valence electron is delocalised forming waek bonds between carbon atoms in adjoining layers.</p></div>
+            </div>
+        </div>
+
 
         <hr class="my-24">
         
@@ -517,19 +316,29 @@
         </div>
         <footer class="text-base text-center mt-12 border-t-[1px] border-[#767676] border-solid pt-4">Copyright &copy; The University of Western Australia 2001 (ISBN 1-74052-000-9)</footer>
     </main>
-
-    <script src="index.js"></script>
-
-    <script>
-      // Initialization for ES Users
-      import {
-        Tab,
-        initTE,
-      } from "tw-elements";
-
-      initTE({ Tab });
-    </script>
-
-    <script type="text/javascript" src="../../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
   </body>
+
+  <script>
+    function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+
 </html>
