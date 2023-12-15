@@ -25,95 +25,335 @@
       position: fixed;
     }
 
+    div.resultsTable {
+      width: 100%;
+      text-align: left;
+      font-family: Arial, sans-serif;
+    }
+
+    .divTableCell {
+      display: flex;
+    }
+
+    .divTableCell div {
+      flex: 1;
+    }
+
+    .divTable.resultsTable .divTableCell, .divTable.resultsTable .divTableHead {
+      padding: 1rem;
+    }
+    .divTable.resultsTable .divTableBody .divTableCell {
+      font-size: 1.25rem;
+    }
+
+    .resultsTable.outerTableFooter {
+      border-top: none;
+    }
+    .resultsTable.outerTableFooter .tableFootStyle {
+      padding: 1rem; 
+    }
+    /* DivTable.com */
+    .divTable{ display: table; }
+    .divTableRow { display: table-row; }
+    .divTableHeading { display: table-header-group;}
+    .divTableCell, .divTableHead { display: table-cell;}
+    .divTableHeading { display: table-header-group;}
+    .divTableFoot { display: table-footer-group;}
+    .divTableBody { display: table-row-group;}
+
+    .retry {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 0 auto !important;
+      color: white;
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: 2pt solid white;
+      width: 245px;
+      display: block;
+      background: #333333;
+      transition: 0.25s;
+    }
+
+    .retry:hover {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 0 auto !important;
+      color: #333333;
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: 2pt solid white;
+      width: 245px;
+      display: block;
+      background: white;
+      transition: 0.25s;
+      cursor: pointer;
+      box-shadow: 3px 3px 10px #0d0d0d;
+    }
+
   </style>
 
   <body>
 
-      <!--This just enables you to switch between light and dark themes-->
-      <div class="toggleBtns">
-        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
-        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
-        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+    <!--This just enables you to switch between light and dark themes-->
+    <div class="toggleBtns">
+      <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+      <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+      <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+    </div>
+    <script>
+      // change stylesheet using JavaScript
+      function changeSheet(sheet) {
+         var style = document.getElementById('theme');
+         style.setAttribute('href', sheet);
+      }
+    </script>
+    <!--Toggle End-->
+
+    <button style="margin: 2rem auto 0 auto; width: 63%; display: block;">&lt; {{Previous Page}}</button>
+
+    <main class="quiz">
+
+      <h3 class="pagebreak">Assessment Results</h3>
+
+      <div style="background-color: #3C7C09; color: white ; padding: 3rem; position: relative;">
+
+          <img src="img/progress-circle.png" alt="progress" style="position:absolute; z-index: 10; width: 330px; left: 34%;">
+
+          <div style="width: 88px; margin: 3rem auto 0 auto; display:block;">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white;">done</span>
+          </div>
+
+          <p style="font-weight:bold; text-align: center; color: white; text-transform: uppercase; font-size:2rem;">Passed</p>
+
+          <p style="text-align: center; color: white; font-size: 6.25rem; margin: 2rem 0;">67%</p>
+
+          <p style="text-align: center; color: white; font-size: 1.125rem; margin-top:9rem;">Well done!</p>
+
+          <hr style="height: 2px; border: none; background-color: white ; opacity: 0.2; margin: 2rem 0 5rem 0; margin-bottom: 3rem;">
+
+          <p style="color: white; font-weight: bold;">Result details:</p>
+
+          <div class="divTable resultsTable">
+            <div class="divTableBody">
+              <div class="divTableRow">
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> check_circle</span> Question 1: Correct
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> check_circle</span> Question 2: Correct
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> check_circle</span> Question 3: Correct
+                </div>
+
+              </div>
+              <div class="divTableRow">
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> check_circle</span> Question 4: Correct
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> cancel</span> Question 5: Incorrect
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> cancel</span> Question 6: Incorrect
+                </div>
+                
+              </div>
+          </div>
+
+        </div>
+
+    	</div>
+
+      <p style=" margin-bottom:12rem;">(REMOVE): Assessment Results: Passed</p>
+
+
+
+
+
+
+      <h3 class="pagebreak">Assessment Results</h3>
+
+      <div style="background-color: #333333; color: white ; padding: 3rem; position: relative;">
+
+          <img src="img/progress-circle-17.png" alt="progress" style="position:absolute; z-index: 10; width: 330px; left: 34%;">
+
+          <div style="width: 88px; margin: 3rem auto 0 auto; display:block;">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white;">close</span>
+          </div>
+
+          <p style="font-weight:bold; text-align: center; color: white; text-transform: uppercase; font-size:2rem;">Try Again</p>
+
+          <p style="text-align: center; color: white; font-size: 6.25rem; margin: 2rem 0;">17%</p>
+
+          <p style="text-align: center; color: white; font-size: 1.125rem; margin-bottom: 1rem; margin-top:9rem;">Minimum score required: 60%</p>
+
+          <p style="text-align: center; color: white; font-size: 1.125rem; margin-bottom: 1rem;">Please retake the assessment.</p>
+
+          <p class="retry">Retry</p>
+
+          <hr style="height: 2px; border: none; background-color: white ; opacity: 0.2; margin: 5rem 0; margin-top: 1rem; margin-bottom: 3rem;">
+
+          <p style="color: white; font-weight: bold;">Result details:</p>
+
+          <div class="divTable resultsTable">
+            <div class="divTableBody">
+              <div class="divTableRow">
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> cancel</span> Question 1: Incorrect
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> cancel</span> Question 2: Incorrect
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> cancel</span> Question 3: Incorrect
+                </div>
+
+              </div>
+              <div class="divTableRow">
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> check_circle</span> Question 4: Correct
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> cancel</span> Question 5: Incorrect
+                </div>
+
+                <div class="divTableCell">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white; font-size: 1.4rem !important;"> cancel</span> Question 6: Incorrect
+                </div>
+                
+              </div>
+          </div>
+          
+        </div>
+
       </div>
-      <script>
-        // change stylesheet using JavaScript
-        function changeSheet(sheet) {
-           var style = document.getElementById('theme');
-           style.setAttribute('href', sheet);
-        }
-      </script>
-      <!--Toggle End-->
 
-      <main class="quiz">
-
-      <header class="quiz-header">
-          <span class="material-symbols-outlined">quiz</span>
-	        <h1 class="fade-in">Results</h1>
-	        <p class="lesson-description">Results for Lesson 1: Introduction to Accessibility for Online Learning.</p>
-    	</header>
+      <p style=" margin-bottom:12rem;">(REMOVE): Assessment Results: Failed</p>
 
       
-      <section>
-        <!--Q1-->
-      	<p style="font-weight: bold; font-size:18px; margin-bottom: 2rem;">Question 1:</p>
 
-      	<p style="font-size:24px; margin-bottom: 1rem; line-height: 2rem;">How many miles would The Proclaimers walk to be the man who falls down at your door?</p>
 
-      	<p style="padding: 2rem; background-color: #e1e1e1;"><span style="font-weight: bold;">You chose:</span> C, 500 miles</p>
-        <p style="padding: 2rem; background-color: #15803d; color: white;"><span style="font-weight: bold; color: white;">Correct Answer:</span> C, 500 miles</p>
 
-        <!-- Q2 -->
-        <p style="font-weight: bold; font-size:18px; margin-bottom: 2rem; margin-top: 6rem">Question 2:</p>
+      <h3 class="pagebreak">Lesson Review Results</h3>
 
-        <p style="font-size:24px; margin-bottom: 1rem; line-height: 2rem;">If there's something strange in the neighbourhood, who ya gonna call?</p>
+      <div style="background-color: #f2f2f2; color: white ; padding: 3rem; position: relative;">
 
-        <p style="padding: 2rem; background-color: #e1e1e1;"><span style="font-weight: bold;">You chose:</span> D, Drove Boulders</p>
-        <p style="padding: 2rem; background-color: #dc2626; color: white;"><span style="font-weight: bold; color: white;">Correct Answer:</span> A, Ghost Busters</p>
+          <!-- <img src="img/progress-circle.png" alt="progress" style="position:absolute; z-index: 10; width: 330px; left: 34%;"> -->
 
-        <!--Q1-->
-        <p style="font-weight: bold; font-size:18px; margin-bottom: 2rem; margin-top: 6rem">Question 3:</p>
+          <!-- <div style="width: 88px; margin: 3rem auto 0 auto; display:block;">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: white;">done</span>
+          </div> -->
 
-        <p style="font-size:24px; margin-bottom: 1rem; line-height: 2rem;">How many miles would The Proclaimers walk to be the man who falls down at your door?</p>
+          <!-- <p style="font-weight:bold; text-align: center; color: white; text-transform: uppercase; font-size:2rem;">Complete</p> -->
 
-        <p style="padding: 2rem; background-color: #e1e1e1;"><span style="font-weight: bold;">You chose:</span> C, 500 miles</p>
-        <p style="padding: 2rem; background-color: #15803d; color: white;"><span style="font-weight: bold; color: white;">Correct Answer:</span> C, 500 miles</p>
+          <p style="text-align: center; color: #1a1a1a; font-size: 6.25rem; margin: 3rem 0 2rem 0; text-transform: uppercase;">Complete</p>
 
-        <!-- Q2 -->
-        <p style="font-weight: bold; font-size:18px; margin-bottom: 2rem; margin-top: 6rem">Question 4:</p>
+           <p style="text-align: center; color: #1a1a1a; font-size: 1.125rem;">Youre Score: {{if needed}}</p>
 
-        <p style="font-size:24px; margin-bottom: 1rem; line-height: 2rem;">If there's something strange in the neighbourhood, who ya gonna call?</p>
+          <hr style="height: 2px; border: none; background-color: #1a1a1a ; opacity: 0.2; margin: 2rem 0 5rem 0; margin-bottom: 3rem;">
 
-        <p style="padding: 2rem; background-color: #e1e1e1;"><span style="font-weight: bold;">You chose:</span> D, Drove Boulders</p>
-        <p style="padding: 2rem; background-color: #dc2626; color: white;"><span style="font-weight: bold; color: white;">Correct Answer:</span> A, Ghost Busters</p>
+          <p style="color: #1a1a1a; font-weight: bold;">Result details:</p>
 
-        <!--Q1-->
-        <p style="font-weight: bold; font-size:18px; margin-bottom: 2rem; margin-top: 6rem">Question 5:</p>
+          <div class="divTable resultsTable">
+            <div class="divTableBody">
+              <div class="divTableRow">
 
-        <p style="font-size:24px; margin-bottom: 1rem; line-height: 2rem;">How many miles would The Proclaimers walk to be the man who falls down at your door?</p>
+                <div class="divTableCell" style="color: #1a1a1a;">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #1a1a1a; font-size: 1.4rem !important;"> check_circle</span> Question 1: Correct
+                </div>
 
-        <p style="padding: 2rem; background-color: #e1e1e1;"><span style="font-weight: bold;">You chose:</span> C, 500 miles</p>
-        <p style="padding: 2rem; background-color: #15803d; color: white;"><span style="font-weight: bold; color: white;">Correct Answer:</span> C, 500 miles</p>
+                <div class="divTableCell" style="color: #1a1a1a;">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #1a1a1a; font-size: 1.4rem !important;"> check_circle</span> Question 2: Correct
+                </div>
 
-        <!-- Q2 -->
-        <p style="font-weight: bold; font-size:18px; margin-bottom: 2rem; margin-top: 6rem;">Question 6:</p>
+                <div class="divTableCell" style="color: #1a1a1a;">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #1a1a1a; font-size: 1.4rem !important;"> check_circle</span> Question 3: Correct
+                </div>
 
-        <p style="font-size:24px; margin-bottom: 1rem; line-height: 2rem;">If there's something strange in the neighbourhood, who ya gonna call?</p>
+              </div>
+              <div class="divTableRow">
 
-        <p style="padding: 2rem; background-color: #e1e1e1;"><span style="font-weight: bold;">You chose:</span> D, Drove Boulders</p>
-        <p style="padding: 2rem; background-color: #dc2626; color: white;"><span style="font-weight: bold; color: white;">Correct Answer:</span> A, Ghost Busters</p>
+                <div class="divTableCell" style="color: #1a1a1a;">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #1a1a1a; font-size: 1.4rem !important;"> check_circle</span> Question 4: Correct
+                </div>
 
-      </section>
-        <!-- Following colour combos are accessible -->
-        <p style="padding: 4rem; background-color: #0e7490; color: white; font-weight: bold; font-size:4rem; text-align: center;">Score: 90%</p>
-        <p style="padding: 4rem; background-color: #15803d; color: white; font-weight: bold; font-size:4rem; text-align: center;">Score: 70%</p>
-        <p style="padding: 4rem; background-color: #b45309; color: white; font-weight: bold; font-size:4rem; text-align: center;">Score: 50%</p>
-        <p style="padding: 4rem; background-color: #dc2626; color: white; font-weight: bold; font-size:4rem; text-align: center;">Score: 40%</p>
+                <div class="divTableCell" style="color: #1a1a1a;">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #1a1a1a; font-size: 1.4rem !important;"> cancel</span> Question 5: Incorrect
+                </div>
+
+                <div class="divTableCell" style="color: #1a1a1a;">
+                    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #1a1a1a; font-size: 1.4rem !important;"> cancel</span> Question 6: Incorrect
+                </div>
+                
+              </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <p style=" margin-bottom:12rem;">(REMOVE): Lesson/Quiz Results: Complete</p>
+
+
+      <!-- <h3 class="pagebreak">Lesson Review Results</h3> -->
+
+      <div style="background-color: #f2f2f2; color: white ; padding: 3rem; position: relative;">
+
+          <div style="width: 88px; margin: 0 auto; display:block;">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #3c7c09;">check_circle</span>
+          </div>
+
+          <p style="font-weight:bold; text-align: center; color: #1a1a1a; font-size:1.5rem;">Correct!</p>
+
+          <p style="text-align: center; color: #1a1a1a; font-size: 1.125rem;">Gandalf is impressed with your wizardry!</p>
+
+        </div>
+
+      </div>
+
+      <p style=" margin-bottom:12rem;">(REMOVE): Submit Answer Results/Feedback: Correct</p>
+
+
+
+
+
+      <div style="background-color: #f2f2f2; color: white ; padding: 3rem; position: relative;">
+
+          <div style="width: 88px; margin: 0 auto; display:block;">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0; color: #1a1a1a;">cancel</span>
+          </div>
+
+          <p style="font-weight:bold; text-align: center; color: #1a1a1a; font-size:1.5rem;">Correct!</p>
+
+          <p style="text-align: center; color: #1a1a1a; font-size: 1.125rem;">I'm sorry, but like Gandalf says, you shall not pass!</p>
+
+        </div>
+
+      </div>
+
+      <p style=" margin-bottom:12rem;">(REMOVE): Submit Answer Results/Feedback: Incorrect</p>
+
 
       <footer>
         <p> &copy; Organisation Name | 20/06/2023 | v1.2.3</p>
       </footer>
     	
     </main>
+
+    <button style="margin: 0 auto 2rem auto; width: 63%; display: block;">{{Next Page}} &gt;</button>
 
     <div class="waves">
       <div class='air air1'></div>
