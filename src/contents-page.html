@@ -83,22 +83,24 @@
 
   <body>
 
-      <!--This just enables you to switch between light and dark themes-->
-      <div class="toggleBtns">
-        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
-        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
-        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
-      </div>
-      <script>
-        // change stylesheet using JavaScript
-        function changeSheet(sheet) {
-           var style = document.getElementById('theme');
-           style.setAttribute('href', sheet);
-        }
-      </script>
-      <!--Toggle End-->
+    <!--This just enables you to switch between light and dark themes-->
+    <div class="toggleBtns">
+      <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+      <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+      <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+    </div>
+    <script>
+      // change stylesheet using JavaScript
+      function changeSheet(sheet) {
+         var style = document.getElementById('theme');
+         style.setAttribute('href', sheet);
+      }
+    </script>
+    <!--Toggle End-->
 
-      <main>
+    <button style="margin: 2rem auto 0 auto; width: 63%; display: block;">&lt; {{Previous Page}}</button>
+
+    <main>
 
       <header class="other">
           <span class="material-symbols-outlined">list</span>
@@ -106,12 +108,9 @@
 	        <!-- <p class="lesson-description" style="padding-bottom: 2rem;"></p> -->
     	</header>
 
-      <!--Q1-->
-      <section>
-      	<!-- <h3 class="pagebreak">Well done! You have passed:</h3>
 
-        <p><strong>{{Course Name}}.</strong></p>
- -->
+      <section>
+
         <div class="row">
           <a href="#">
             <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsList">
@@ -259,10 +258,6 @@
             </div>
           </div>
         </div>
-
-
-
-
       </section>
 
       <footer>
@@ -270,6 +265,8 @@
       </footer>
     	
     </main>
+
+    <button style="margin: 0 auto 2rem auto; width: 63%; display: block;">{{Next Page}} &gt;</button>
 
 	  <script src="index.js"></script>
 

@@ -30,22 +30,24 @@
 
   <body>
 
-      <!--This just enables you to switch between light and dark themes-->
-      <div class="toggleBtns">
-        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
-        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
-        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
-      </div>
-      <script>
-        // change stylesheet using JavaScript
-        function changeSheet(sheet) {
-           var style = document.getElementById('theme');
-           style.setAttribute('href', sheet);
-        }
-      </script>
-      <!--Toggle End-->
+    <!--This just enables you to switch between light and dark themes-->
+    <div class="toggleBtns">
+      <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+      <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+      <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+    </div>
+    <script>
+      // change stylesheet using JavaScript
+      function changeSheet(sheet) {
+         var style = document.getElementById('theme');
+         style.setAttribute('href', sheet);
+      }
+    </script>
+    <!--Toggle End-->
 
-      <main>
+    <button style="margin: 2rem auto 0 auto; width: 63%; display: block;">&lt; {{Previous Page}}</button>
+
+    <main>
 
       <header class="other">
           <span class="material-symbols-outlined">copyright</span>
@@ -53,7 +55,7 @@
 	        <!-- <p class="lesson-description" style="padding-bottom: 2rem;">{{Course Name}}</p> -->
     	</header>
 
-      <!--Q1-->
+
       <section>
       	<h3 class="pagebreak">Credits:</h3>
 
@@ -77,23 +79,14 @@
 
         <ul>
           <li><a href="https://www.freepik.com/free-vector/three-boxes-full-toys-white_6822405.htm#query=toys&position=3&from_view=search&track=sph&uuid=21fc6056-02fc-4bc8-99d8-15137012025f">Image by brgfx</a> on Freepik</li>
-          <li>Arkoudis, Sophie, Mollie Dollinger, Chi Baik, and Allan Patience. 2019. “International 
-Students’ Experience in Australian Higher Education: Can We Do Better?” Higher 
-Education 77 (5): 799-813. https://doi.org/10.1007/s10734-018-0302-x.</li>
-          <li>The Australian. 2016. “A Higher Education Return.” August 18, 2016. 
-https://www.proquest.com/newspapers/higher-education return/docview/1811922139/se-2?accountid=10382.</li>
-          <li>ABS (Australian Bureau of Statistics). 2021. Education and Work, Australia. Canberra, ACT:
-ABS. https://www.abs.gov.au/statistics/people/education/education-and-work australia.</li>
-          <li>Boulton, Chris A., Emily Hughes, Carmel Kent, Joanne R. Smith, and Hywel T. P. Williams. 
-2019. “Student Engagement and Wellbeing Over Time at a Higher Education 
-Institution.” PLoS ONE 14 (11): e0225770. 
-https://doi.org/10.1371/journal.pone.0225770.</li>
-          <li>Forsyth, Hannah. 2014a. “Dreaming of Higher Education.” Southerly 74 (2): 119-142. 
-https://doi.org/10.3316/informit.792227855125093.</li>
+          <li>Arkoudis, Sophie, Mollie Dollinger, Chi Baik, and Allan Patience. 2019. “International Students’ Experience in Australian Higher Education: Can We Do Better?” Higher Education 77 (5): 799-813. https://doi.org/10.1007/s10734-018-0302-x.</li>
+          <li>The Australian. 2016. “A Higher Education Return.” August 18, 2016. https://www.proquest.com/newspapers/higher-education return/docview/1811922139/se-2?accountid=10382.</li>
+          <li>ABS (Australian Bureau of Statistics). 2021. Education and Work, Australia. Canberra, ACT:ABS. https://www.abs.gov.au/statistics/people/education/education-and-work australia.</li>
+          <li>Boulton, Chris A., Emily Hughes, Carmel Kent, Joanne R. Smith, and Hywel T. P. Williams. 2019. “Student Engagement and Wellbeing Over Time at a Higher Education Institution.” PLoS ONE 14 (11): e0225770. https://doi.org/10.1371/journal.pone.0225770.</li>
+          <li>Forsyth, Hannah. 2014a. “Dreaming of Higher Education.” Southerly 74 (2): 119-142. https://doi.org/10.3316/informit.792227855125093.</li>
           <li>Image by <a href="https://pixabay.com/users/childdreams-34556904/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8318355">Valeriu Cuțebov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8318355">Pixabay</a></li>
           <li>iStock.com/Artist's Member Name.</li>
         </ul>
-
       </section>
 
       <footer>
@@ -101,6 +94,8 @@ https://doi.org/10.3316/informit.792227855125093.</li>
       </footer>
     	
     </main>
+
+    <button style="margin: 0 auto 2rem auto; width: 63%; display: block;">{{Next Page}} &gt;</button>
 
 	  <script src="index.js"></script>
 

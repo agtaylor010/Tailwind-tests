@@ -30,22 +30,24 @@
 
   <body>
 
-      <!--This just enables you to switch between light and dark themes-->
-      <div class="toggleBtns">
-        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
-        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
-        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
-      </div>
-      <script>
-        // change stylesheet using JavaScript
-        function changeSheet(sheet) {
-           var style = document.getElementById('theme');
-           style.setAttribute('href', sheet);
-        }
-      </script>
-      <!--Toggle End-->
+    <!--This just enables you to switch between light and dark themes-->
+    <div class="toggleBtns">
+      <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+      <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+      <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+    </div>
+    <script>
+      // change stylesheet using JavaScript
+      function changeSheet(sheet) {
+         var style = document.getElementById('theme');
+         style.setAttribute('href', sheet);
+      }
+    </script>
+    <!--Toggle End-->
 
-      <main>
+    <button style="margin: 2rem auto 0 auto; width: 63%; display: block;">&lt; {{Previous Page}}</button>
+
+    <main>
 
       <header class="other">
           <span class="material-symbols-outlined">location_on</span>
@@ -73,6 +75,8 @@
       </footer>
     	
     </main>
+
+    <button style="margin: 0 auto 2rem auto; width: 63%; display: block;">{{Next Page}} &gt;</button>
 
 	  <script src="index.js"></script>
 
