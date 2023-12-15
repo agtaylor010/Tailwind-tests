@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arise: Credits Page</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" id="theme">
+    <link rel="stylesheet" href="responsive.css">
+    <!--<link rel="stylesheet" href="content-animation.css">--> <!--Turn on/off content animation here-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+
+  <!--REMOVE when implementing - this just allows to toggle between the 2 themes-->
+  <style type="text/css">
+    
+    submit {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    .toggleBtns {
+      background-color: dark-grey;
+      position: fixed;
+    }
+
+  </style>
+
+  <body>
+
+      <!--This just enables you to switch between light and dark themes-->
+      <div class="toggleBtns">
+        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+      </div>
+      <script>
+        // change stylesheet using JavaScript
+        function changeSheet(sheet) {
+           var style = document.getElementById('theme');
+           style.setAttribute('href', sheet);
+        }
+      </script>
+      <!--Toggle End-->
+
+      <main>
+
+      <header class="other">
+          <span class="material-symbols-outlined">copyright</span>
+	        <h1 class="fade-in">Course Credits</h1>
+	        <p class="lesson-description" style="padding-bottom: 2rem;">{{Course Name}}</p>
+    	</header>
+
+      <!--Q1-->
+      <section>
+      	<h2 class="pagebreak">Credits:</h2>
+
+        <p>Designed and developed by {{Institution Name}}.</p>
+
+        <p>Project team:</p>
+        <ul>
+          <li><strong>Project Manager:</strong> John Citizen</li>
+          <li><strong>Lead Developer:</strong> John Citizen</li>
+          <li><strong>Instructional Designer:</strong> John Citizen</li>
+          <li><strong>Graphic Designer:</strong> John Citizen</li>
+          <li><strong>Editor:</strong> John Citizen</li>
+          <li><strong>Accessibility specialist:</strong> John Citizen</li>
+          <li><strong>QA:</strong> John Citizen</li>
+          <li><strong>Advisory:</strong> John Citizen</li>
+        </ul>
+
+        <hr>
+      	
+        <h2 class="pagebreak">References:</h2>
+
+        <ul>
+          <li><a href="https://www.freepik.com/free-vector/three-boxes-full-toys-white_6822405.htm#query=toys&position=3&from_view=search&track=sph&uuid=21fc6056-02fc-4bc8-99d8-15137012025f">Image by brgfx</a> on Freepik</li>
+          <li>Arkoudis, Sophie, Mollie Dollinger, Chi Baik, and Allan Patience. 2019. “International 
+Students’ Experience in Australian Higher Education: Can We Do Better?” Higher 
+Education 77 (5): 799-813. https://doi.org/10.1007/s10734-018-0302-x.</li>
+          <li>The Australian. 2016. “A Higher Education Return.” August 18, 2016. 
+https://www.proquest.com/newspapers/higher-education return/docview/1811922139/se-2?accountid=10382.</li>
+          <li>ABS (Australian Bureau of Statistics). 2021. Education and Work, Australia. Canberra, ACT:
+ABS. https://www.abs.gov.au/statistics/people/education/education-and-work australia.</li>
+          <li>Boulton, Chris A., Emily Hughes, Carmel Kent, Joanne R. Smith, and Hywel T. P. Williams. 
+2019. “Student Engagement and Wellbeing Over Time at a Higher Education 
+Institution.” PLoS ONE 14 (11): e0225770. 
+https://doi.org/10.1371/journal.pone.0225770.</li>
+          <li>Forsyth, Hannah. 2014a. “Dreaming of Higher Education.” Southerly 74 (2): 119-142. 
+https://doi.org/10.3316/informit.792227855125093.</li>
+          <li>Image by <a href="https://pixabay.com/users/childdreams-34556904/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8318355">Valeriu Cuțebov</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8318355">Pixabay</a></li>
+          <li>iStock.com/Artist's Member Name.</li>
+        </ul>
+
+      </section>
+
+      <footer>
+        <p> &copy; Organisation Name | 20/06/2023 | v1.2.3</p>
+      </footer>
+    	
+    </main>
+
+	  <script src="index.js"></script>
+
+    <script type="text/javascript">
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 300; // height at which the element should be revealed to the user.
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arise: Contents Page</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" id="theme">
+    <link rel="stylesheet" href="responsive.css">
+    <!--<link rel="stylesheet" href="content-animation.css">--> <!--Turn on/off content animation here-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+
+  <!--REMOVE when implementing - this just allows to toggle between the 2 themes-->
+  <style type="text/css">
+    
+    submit {
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    .toggleBtns {
+      background-color: dark-grey;
+      position: fixed;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 29%;
+      padding: 10px;
+      margin-right: 1.55rem;
+/*      height: 300px; /* Should be removed. Only for demonstration */*/
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+      margin-bottom: 0rem;
+    }
+
+
+    .contentsList {
+      background-color: #F7F7F7;
+      border: 2pt solid var( --color-primary );
+      display: flex;
+      margin: 0 0 0 0;
+      transition-timing-function: ease-in-out;
+      transition: 0.25s;
+      width: 31.8%;
+      float: left;
+/*      display: inline-block;*/
+      
+    }
+
+    .contentsListDisabled {
+      background-color: #F7F7F7;
+      border: 2pt solid #F7F7F7;
+      display: flex;
+      margin: 0 0 0 0;
+      width: 31.8%;
+      float: left; 
+    }
+
+
+    .contentsList:hover {
+      background-color: var( --color-primary );
+      box-shadow: 3px 3px 10px #CFCFCF;
+      color: white !important;
+    }
+
+    .contentsList > div {
+      padding: 0rem;
+      font-size: 30px;
+    }
+
+
+  </style>
+
+  <body>
+
+      <!--This just enables you to switch between light and dark themes-->
+      <div class="toggleBtns">
+        <submit onclick = "changeSheet('styles.css')"> ☀️ </submit><br>
+        <submit onclick = "changeSheet('darkstyles.css')"> 🌑 </submit><br>
+        <submit onclick = "changeSheet('printstyles.css')"> 📄 </submit>
+      </div>
+      <script>
+        // change stylesheet using JavaScript
+        function changeSheet(sheet) {
+           var style = document.getElementById('theme');
+           style.setAttribute('href', sheet);
+        }
+      </script>
+      <!--Toggle End-->
+
+      <main>
+
+      <header class="other">
+          <span class="material-symbols-outlined">list</span>
+	        <h1 class="fade-in">Contents</h1>
+	        <!-- <p class="lesson-description" style="padding-bottom: 2rem;"></p> -->
+    	</header>
+
+      <!--Q1-->
+      <section>
+      	<!-- <h3 class="pagebreak">Well done! You have passed:</h3>
+
+        <p><strong>{{Course Name}}.</strong></p>
+ -->
+        <div class="row">
+          <a href="#">
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsList">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0 !important;; padding: 0;">Description</p>
+                <span style="font-size:14px !important;">x sections</span>
+              </div>
+            </div>
+          </a>
+          <div>
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="margin-bottom: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          <div>
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="margin-bottom: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          <div>
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="margin-bottom: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Title</strong></p>
+                <p style="margin: -10px 0 -10px 0; padding: 0; color: #ccc !important;">Description</p>
+                <span style="font-size:14px !important; color: #ccc !important;">x sections</span>
+              </div>
+            </div>
+          <div>
+            <div style="margin-bottom: 1rem; margin-right: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Summary</strong></p>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="margin-bottom: 1rem;" class="contentsListDisabled">
+              <div id="icon">
+                <span class="material-symbols-outlined summaryListItem" style="padding: 2rem 1rem; margin: auto; font-size: calc( 3rem + 0.390625vw ) !important; color: #ccc !important;">book</span>
+              </div>
+              <div id="description" style="padding: 1.2rem 1rem; margin: auto auto auto 1rem;">
+                <p style="margin: 0; padding: 0; color: #ccc !important;"><strong>Assessment</strong></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </section>
+
+      <footer>
+        <p> &copy; Organisation Name | 20/06/2023 | v1.2.3</p>
+      </footer>
+    	
+    </main>
+
+	  <script src="index.js"></script>
+
+    <script type="text/javascript">
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 300; // height at which the element should be revealed to the user.
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    </script>
+
+  </body>
+</html>
